@@ -4,8 +4,11 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
 
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 class Task extends Model
 {
+    use SoftDeletes;
 
     /**
      * 状態定義

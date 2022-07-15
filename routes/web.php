@@ -1,4 +1,6 @@
 <?php
+use App\Folder;
+use App\Task;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +27,12 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/folders/{folder}/tasks/{task}/edit', 'TaskController@showEditForm')->name('tasks.edit');
     Route::post('/folders/{folder}/tasks/{task}/edit', 'TaskController@edit');
+
+    //  削除機能
+    Route::get('/folders/{folder}/softdelete', 'FolderController@delete');
+
+    Route::get('/tasks/{task}/softdelete', 'TaskController@edit');
+
   });
 });
 

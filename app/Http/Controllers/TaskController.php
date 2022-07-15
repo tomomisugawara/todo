@@ -104,4 +104,10 @@ class TaskController extends Controller
             abort(404);
         }
     }
+
+    // 削除機能
+    public function delete(Task $task)
+    {
+        $tasks->delete();
+    }
 }

@@ -18,6 +18,7 @@
                   class="list-group-item {{ $current_folder_id === $folder->id ? 'active' : '' }}">
                 {{ $folder->title }}
               </a>
+              <button>削除</button>
             @endforeach
           </div>
         </nav>

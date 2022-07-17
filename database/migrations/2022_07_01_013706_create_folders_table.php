@@ -19,7 +19,7 @@ class CreateFoldersTable extends Migration
             $table->timestamps();
 
 
-            // tuika
+            // 削除機能
             $table->softDeletes();
         });
     }
@@ -33,7 +33,7 @@ class CreateFoldersTable extends Migration
     {
         Schema::dropIfExists('folders');
 
-        // tuiak
+        // 削除機能
         Schema::table('texts', function (Blueprint $table) {
             $table->dropSoftDeletes();
         });

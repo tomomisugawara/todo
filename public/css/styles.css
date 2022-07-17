@@ -11,7 +11,7 @@ body {
 
 .my-navbar {
   align-items: center;
-  background: #333;
+  background: #94B49F;
   display: flex;
   height: 6rem;
   justify-content: space-between;
@@ -44,3 +44,22 @@ a.my-navbar-item:hover {
 .form-control[readonly] {
   background-color: #fff;
 }
+
+.btn-folder {
+  position: relative;
+}
+
+.btn-folder__link span {
+  display: inline-block;
+  width: 80%;
+  word-break: break-word;
+}
+
+.btn-folder__delete {
+  /* width: 100px; */
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  z-index: 10;
+}
+

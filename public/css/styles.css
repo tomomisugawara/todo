@@ -25,7 +25,7 @@ body {
 
 .my-navbar-brand,
 .my-navbar-item {
-  color: #8c8c8c;
+  color: black;
 }
 
 .my-navbar-brand:hover,
@@ -45,6 +45,7 @@ a.my-navbar-item:hover {
   background-color: #fff;
 }
 
+/* 削除ボタン */
 .btn-folder {
   position: relative;
 }
@@ -58,8 +59,14 @@ a.my-navbar-item:hover {
 .btn-folder__delete {
   /* width: 100px; */
   position: absolute;
-  top: 8px;
+  /* top: 8px; */
   right: 12px;
   z-index: 10;
 }
 
+
+
+.panel-default>.panel-heading {
+  background-color: #94B49F;
+  color: black;
+}

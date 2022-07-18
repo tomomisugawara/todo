@@ -16,7 +16,6 @@
           <a href="{{ route('tasks.index', ['folder' => $folder->id]) }}" class="list-group-item btn-folder__link {{ $current_folder_id === $folder->id ? 'active' : '' }}">
             <span>{{ $folder->title }}</span>
           </a>
-          <!-- <button class="btn-folder__delete">削除</button> -->
           <button class="btn-folder__delete" type="button" class="btn btn-default" aria-label="Left Align">
           <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button> 
           @endforeach
@@ -39,7 +38,8 @@
               <th>タイトル</th>
               <th>状態</th>
               <th>期限</th>
-              <th></th>
+              <th>編集</th>
+              <th>削除</th>
             </tr>
           </thead>
           <tbody>

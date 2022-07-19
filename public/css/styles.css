@@ -2,7 +2,26 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/bootflat/2.0.4/css/bootflat.min.css');
 
 body {
-  background-color: #FCF8E8;
+  /* background-color: #FCF8E8; */
+
+  /* ストライプ */
+	background-color: #FCF8E8;
+	background-image:
+	 linear-gradient(-90deg, #fff 50%, transparent 50%);
+	background-size: 14px 14px;
+  background-size: 150px;
+
+    /* ドット斜め */
+  /* background-color: #fff;
+  background-image:
+    radial-gradient(#FCF8E8 20%, transparent 20%),
+    radial-gradient(#FCF8E8 20%, transparent 20%);
+  background-size: 400px 400px; /* background-positionの2倍*/
+  background-position: 0 0, 200px 200px; */
+}
+
+*{
+  box-sizing: border-box;
 }
 
 /* header */
@@ -52,6 +71,33 @@ a.my-navbar-item:hover {
   background-color: #fff;
 }
 
+/* text */
+.hero {
+  /* width: calc(100% - 40%); */
+  width: 300px;
+  text-align: center;
+  padding: 70px 14px;
+  border-radius: 70% 30% 80% 20% / 50% 66% 34% 50% ;
+  background-color: #ECB390;
+  margin: 0 auto;
+}
+
+/* パスワード変更文字 */
+.text-center a{
+  color: black;
+}
+.text-center a:hover {
+  color: #ECB390;
+}
+
+
+/* 送信ボタン */
+.btn-primary {
+  background-color: #ECB390;
+  border: none;
+}
+
+/* フォルダ・タスク画面 */
 /* ボタンレイアウト */
 button{
   background-color: #ECB390;
@@ -102,7 +148,7 @@ button{
 }
 
 .btn-folder__delete {
-   /* width: 100px; */
+   width: 25px;
   position: absolute;
   top: 10px;
   right: 12px;
@@ -119,4 +165,3 @@ a.list-group-item.active, a.list-group-item.active:focus, a.list-group-item.acti
   vertical-align: bottom;
   border-bottom: 2px solid #CEE5D0;
 }
-

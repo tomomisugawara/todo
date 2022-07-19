@@ -71,7 +71,26 @@ button{
   /* color: black; */
 }
 
-/* フォルダ削除ボタン */
+/* フォルダレイアウト */
+
+ .folder-flex{
+  /* display: flex; */
+  position: relative;
+  background-color: #CEE5D0;
+}
+
+.folder-flex a {
+  width: 100%;
+}
+
+.list-group-item{
+  width: 90%;
+}
+
+.btn-folder__delete{
+  width: 10%;
+}
+
 .btn-folder {
   position: relative;
 }
@@ -83,9 +102,9 @@ button{
 }
 
 .btn-folder__delete {
-  /* width: 100px; */
+   /* width: 100px; */
   position: absolute;
-  /* top: 10px; */
+  top: 10px;
   right: 12px;
   z-index: 10;
 }
@@ -100,3 +119,4 @@ a.list-group-item.active, a.list-group-item.active:focus, a.list-group-item.acti
   vertical-align: bottom;
   border-bottom: 2px solid #CEE5D0;
 }
+

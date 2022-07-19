@@ -27,11 +27,18 @@ class FolderController extends Controller
             'folder' => $folder->id,
         ]);
     }
-      
+
     //  削除機能
     public function delete(Folder $folder)
     {
         $folder->delete();
         $folder->tasks()->delete();
+        
+        // リダイレクト
+        return redirect()->route('home', 
+        // [
+        //     'folder' => $folder->id,
+        // ]
+    );
     }
 }

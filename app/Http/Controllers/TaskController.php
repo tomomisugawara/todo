@@ -106,8 +106,12 @@ class TaskController extends Controller
     }
 
     // 削除機能
-    public function delete(Task $task)
+    public function delete(Folder $folder, Task $task)
     {
-        $tasks->delete();
+        $task->delete();
+        // リダイレクト
+        return redirect()->route('tasks.index', [
+            'folder' => $folder->id,
+        ]);
     }
 }

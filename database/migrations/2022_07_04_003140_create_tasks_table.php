@@ -26,6 +26,8 @@ class CreateTasksTable extends Migration
 
             // 削除
             $table->softDeletes();
+
+            // $table->complete
         });
     }
 

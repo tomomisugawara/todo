@@ -98,6 +98,13 @@ class TaskController extends Controller
         ]);
     }
 
+
+    public function flagUpdate()
+    {
+        return 'aaaaa';
+    }
+
+
     private function checkRelation(Folder $folder, Task $task)
     {
         if ($folder->id !== $task->folder_id) {

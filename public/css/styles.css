@@ -97,7 +97,7 @@ a.my-navbar-item:hover {
   border: none;
 }
 
-/* フォルダ・タスク画面 */
+/* フォルダ・タスク画面 *
 /* ボタンレイアウト */
 button{
   background-color: #ECB390;
@@ -107,7 +107,7 @@ button{
 
 /* 削除アイコン */
 .glyphicon{
-  top: 2px;
+  /* top: 2px; */
 }
 /* 編集アイコン */
 .glyphicon-pencil:before {
@@ -149,6 +149,7 @@ button{
 
 .btn-folder__delete {
    width: 25px;
+   height: 25px;
   position: absolute;
   top: 10px;
   right: 12px;
@@ -164,4 +165,10 @@ a.list-group-item.active, a.list-group-item.active:focus, a.list-group-item.acti
 .table>thead>tr>th {
   vertical-align: bottom;
   border-bottom: 2px solid #CEE5D0;
+}
+
+/* ラベル */
+.label-danger .active {
+  background-color: blue;
+
 }

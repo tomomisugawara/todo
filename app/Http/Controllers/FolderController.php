@@ -10,7 +10,6 @@ class FolderController extends Controller
 {
     public function showCreateForm()
     {
-        return view('folders/create');
     }
 
     public function create(CreateFolder $request)

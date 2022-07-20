@@ -14,14 +14,14 @@
         <div class="list-group btn-folder">
           @foreach($folders as $folder)
           <div class="folder-flex">
-          <a href="{{ route('tasks.index', ['folder' => $folder->id]) }}" class="list-group-item btn-folder__link {{ $current_folder_id === $folder->id ? 'active' : '' }}">
-            <span>{{ $folder->title }}</span>
-          </a>
-
-          <a href="{{ route('folder.delete', ['folder' => $folder->id]) }}">
-          <button class="btn-folder__delete" type="button" class="btn btn-default" aria-label="Left Align">
-          <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
-          </a>
+            <a href="{{ route('tasks.index', ['folder' => $folder->id]) }}" class="list-group-item btn-folder__link {{ $current_folder_id === $folder->id ? 'active' : '' }}">
+              <span>{{ $folder->title }}</span>
+            </a>
+            <!--  -->
+            <a href="{{ route('folder.delete', ['folder' => $folder->id]) }}" onClick="delete_alert(event);">
+              <button class="btn-folder__delete" type="button" class="btn btn-default" aria-label="Left Align">
+                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+            </a>
 
           </div>
           @endforeach
@@ -54,15 +54,16 @@
               <td>{{ $task->title }}</td>
               <td>
                 <span class="label {{ $task->status_class }}">{{ $task->status_label }}</span>
+                <!-- <span class="label">完了</span> -->
               </td>
               <td>{{ $task->formatted_due_date }}</td>
               <td><a href="{{ route('tasks.edit', ['folder' => $task->folder_id, 'task' => $task->id]) }}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></td>
               <!-- <td><button class="">削除</button></td> -->
 
-              <td><a href="{{ route('task.delete', ['folder' => $task->folder_id, 'task' => $task->id]) }}">
-              <button class="" type="button" class="btn btn-default" aria-label="Left Align">
-          <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
-          
+              <td><a href="{{ route('task.delete', ['folder' => $task->folder_id, 'task' => $task->id]) }}" onClick="delete_alert(event);">
+                  <button class="" type="button" class="btn btn-default" aria-label="Left Align">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
+
 
             </tr>
             @endforeach
@@ -73,3 +74,5 @@
   </div>
 </div>
 @endsection
+@include('share.confirm.scripts')
+@include('share.complete.scripts')

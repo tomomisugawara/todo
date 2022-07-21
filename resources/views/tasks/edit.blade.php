@@ -30,7 +30,7 @@
                 <input type="text" class="form-control" name="title" id="title"
                        value="{{ old('title') ?? $task->title }}" />
               </div>
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label for="status">状態</label>
                 <select name="status" id="status" class="form-control">
                   @foreach(\App\Task::STATUS as $key => $val)
@@ -42,7 +42,7 @@
                     </option>
                   @endforeach
                 </select>
-              </div>
+              </div> -->
               <div class="form-group">
                 <label for="due_date">期限</label>
                 <input type="text" class="form-control" name="due_date" id="due_date"

@@ -42,9 +42,9 @@
           <thead>
             <tr>
               <th>タイトル</th>
-              <th>状態</th>
               <th>期限</th>
               <th>編集</th>
+              <th>状態</th>
               <th>削除</th>
             </tr>
           </thead>
@@ -52,18 +52,22 @@
             @foreach($tasks as $task)
             <tr>
               <td>{{ $task->title }}</td>
-              <td>
-                <span class="label {{ $task->status_class }}">{{ $task->status_label }}</span>
-                <!-- <span class="label">完了</span> -->
-              </td>
-              <td>{{ $task->formatted_due_date }}</td>
-              <td><a href="{{ route('tasks.edit', ['folder' => $task->folder_id, 'task' => $task->id]) }}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></td>
-              <!-- <td><button class="">削除</button></td> -->
 
+              <td>{{ $task->formatted_due_date }}</td>
+
+
+              <td><a href="{{ route('tasks.edit', ['folder' => $task->folder_id, 'task' => $task->id]) }}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+            </td>
+
+            <td>
+                <!-- status_class呼び出す、idを取得する -->
+                <span class="label {{ $task->status_class }}" data-folderid="{{ $task->folder_id }}" data-taskid="{{ $task->id }}">{{ $task->status_label }}</span>
+              </td>
+
+              <!--  -->
               <td><a href="{{ route('task.delete', ['folder' => $task->folder_id, 'task' => $task->id]) }}" onClick="delete_alert(event);">
                   <button class="" type="button" class="btn btn-default" aria-label="Left Align">
                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
-
 
             </tr>
             @endforeach
@@ -76,3 +80,7 @@
 @endsection
 @include('share.confirm.scripts')
 @include('share.complete.scripts')
+
+
+
+

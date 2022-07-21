@@ -10,6 +10,8 @@ class FolderController extends Controller
 {
     public function showCreateForm()
     {
+        // フォルダ追加画面を表示する
+        return view('folders/create');
     }
 
     public function create(CreateFolder $request)

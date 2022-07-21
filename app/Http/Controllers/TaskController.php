@@ -99,9 +99,21 @@ class TaskController extends Controller
     }
 
 
-    public function flagUpdate()
+    public function flagUpdate(Folder $folder, Task $task)
     {
-        return 'aaaaa';
+        if( $task->status === 1){
+            $task->status = 3;
+        }elseif($task->status === 3) {
+            $task->status = 1;
+        }
+        // 更新せず色をかえる
+        $task->save();
+
+        $statusClass = $task->status_class;
+        $statusLabel = $task->status_label;
+        return ['status' => $task->status, 'statusClass' => $statusClass, 'statusLabel' => $statusLabel];
+
+        // $this->checkRelation($folder, $task);
     }
 
 

@@ -21,8 +21,6 @@ class CreateFoldersTable extends Migration
 
             // 削除機能
             $table->softDeletes();
-            //
-            // $table->integer('flag')->default(0);
         });
     }
 

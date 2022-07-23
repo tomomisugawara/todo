@@ -20,14 +20,15 @@
       <!-- ログインしてたら画像表示 -->
        @auth
         <div class="hd-prof-img">
+          <!-- file変数 -->
             @if (!empty($file))
               <img id="preview" src="data:image/{{$mimeType}};base64,{{$file}}">
             @else
-              <img id="preview" src="{{ asset('/storage/images/014.jpg') }}">
+              <img id="preview" src="{{ asset('/storage/img_prof/no-image.jpg') }}">
             @endif
         </div>
 
-        <!-- <input type="file" name="image" id="imageUpload" accept='image/*'> -->
+        <input type="file" name="image" id="imageUpload" accept='image/*'>
         @endauth
         
         @if(Auth::check())

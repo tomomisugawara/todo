@@ -86,7 +86,7 @@ window.addEventListener('DOMContentLoaded', function () {
     }
     reader.readAsDataURL(e.target.files[0]);
 });
-  
+
 });
 // .label-dangerアクティブクラス
 

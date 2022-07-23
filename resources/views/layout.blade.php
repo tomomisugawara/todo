@@ -10,7 +10,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   @yield('styles')
   <link rel="stylesheet" href="/css/styles.css">
-
 </head>
 
 <body>
@@ -18,6 +17,19 @@
     <nav class="my-navbar">
       <a class="my-navbar-brand" href="/">ToDo App Tiikotu</a>
       <div class="my-navbar-control">
+      <!-- ログインしてたら画像表示 -->
+       @auth
+        <div class="hd-prof-img">
+            @if (!empty($file))
+              <img id="preview" src="data:image/{{$mimeType}};base64,{{$file}}">
+            @else
+              <img id="preview" src="{{ asset('/storage/images/014.jpg') }}">
+            @endif
+        </div>
+
+        <!-- <input type="file" name="image" id="imageUpload" accept='image/*'> -->
+        @endauth
+        
         @if(Auth::check())
         <span class="my-navbar-item">ようこそ, {{ Auth::user()->name }}さん</span>
         ｜
@@ -30,6 +42,8 @@
         ｜
         <a class="my-navbar-item" href="{{ route('register') }}">会員登録</a>
         @endif
+
+       
       </div>
     </nav>
   </header>

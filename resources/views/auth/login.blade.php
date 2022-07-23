@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 
-  <div class="hero">
+  <div class="balloon ">
     texttexttexttextetexttexttext<br>
     texttexttexttextetexttexttext<br>
     texttexttexttextetexttexttext<br>

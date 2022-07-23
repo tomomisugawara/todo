@@ -57,9 +57,9 @@
 
 
               <td><a href="{{ route('tasks.edit', ['folder' => $task->folder_id, 'task' => $task->id]) }}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
-            </td>
+              </td>
 
-            <td>
+              <td>
                 <!-- status_class呼び出す、idを取得する -->
                 <span class="label {{ $task->status_class }}" data-folderid="{{ $task->folder_id }}" data-taskid="{{ $task->id }}">{{ $task->status_label }}</span>
               </td>
@@ -77,10 +77,15 @@
     </div>
   </div>
 </div>
+<!-- jsメッセージ -->
+<div class="complete-msg">
+  <p class="complete-msg__text"></p>
+  <div class="complete-msg__img">
+    <img src="/image/animal_namakemono.png" alt="">
+  </div>
+</div>
+
+
 @endsection
 @include('share.confirm.scripts')
 @include('share.complete.scripts')
-
-
-
-

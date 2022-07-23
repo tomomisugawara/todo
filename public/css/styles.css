@@ -5,22 +5,23 @@ body {
   /* background-color: #FCF8E8; */
 
   /* ストライプ */
-	background-color: #FCF8E8;
-	background-image:
-	 linear-gradient(-90deg, #fff 50%, transparent 50%);
-	background-size: 14px 14px;
+  background-color: #FCF8E8;
+  background-image:
+    linear-gradient(-90deg, #fff 50%, transparent 50%);
+  background-size: 14px 14px;
   background-size: 150px;
 
-    /* ドット斜め */
+  /* ドット斜め */
   /* background-color: #fff;
   background-image:
     radial-gradient(#FCF8E8 20%, transparent 20%),
     radial-gradient(#FCF8E8 20%, transparent 20%);
   background-size: 400px 400px; /* background-positionの2倍*/
-  background-position: 0 0, 200px 200px; */
+  background-position: 0 0, 200px 200px;
+  */
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -77,15 +78,16 @@ a.my-navbar-item:hover {
   width: 300px;
   text-align: center;
   padding: 70px 14px;
-  border-radius: 70% 30% 80% 20% / 50% 66% 34% 50% ;
+  border-radius: 70% 30% 80% 20% / 50% 66% 34% 50%;
   background-color: #ECB390;
   margin: 0 auto;
 }
 
 /* パスワード変更文字 */
-.text-center a{
+.text-center a {
   color: black;
 }
+
 .text-center a:hover {
   color: #ECB390;
 }
@@ -99,16 +101,17 @@ a.my-navbar-item:hover {
 
 /* フォルダ・タスク画面 *
 /* ボタンレイアウト */
-button{
+button {
   background-color: #ECB390;
   border-radius: 3px;
   border: none;
 }
 
 /* 削除アイコン */
-.glyphicon{
+.glyphicon {
   /* top: 2px; */
 }
+
 /* 編集アイコン */
 .glyphicon-pencil:before {
   content: "\270f";
@@ -119,7 +122,7 @@ button{
 
 /* フォルダレイアウト */
 
- .folder-flex{
+.folder-flex {
   /* display: flex; */
   position: relative;
   background-color: #CEE5D0;
@@ -129,11 +132,11 @@ button{
   width: 100%;
 }
 
-.list-group-item{
+.list-group-item {
   width: 90%;
 }
 
-.btn-folder__delete{
+.btn-folder__delete {
   width: 10%;
 }
 
@@ -148,8 +151,8 @@ button{
 }
 
 .btn-folder__delete {
-   width: 25px;
-   height: 25px;
+  width: 25px;
+  height: 25px;
   position: absolute;
   top: 10px;
   right: 12px;
@@ -157,7 +160,9 @@ button{
 }
 
 /* フォルダカラー */
-a.list-group-item.active, a.list-group-item.active:focus, a.list-group-item.active:hover  {
+a.list-group-item.active,
+a.list-group-item.active:focus,
+a.list-group-item.active:hover {
   background-color: #CEE5D0;
   border-color: #CEE5D0;
 }
@@ -175,6 +180,11 @@ a.list-group-item.active, a.list-group-item.active:focus, a.list-group-item.acti
 
 /* 吹き出し */
 .complete {
+  background-color: #ECB390;
+}
+
+.complete-msg {
+  display: none;
   position: fixed;
   width: 50;
   height: 50;
@@ -186,8 +196,19 @@ a.list-group-item.active, a.list-group-item.active:focus, a.list-group-item.acti
   width: 300px;
   text-align: center;
   padding: 70px 14px;
-  border-radius: 70% 30% 80% 20% / 50% 66% 34% 50% ;
+  border-radius: 70% 30% 80% 20% / 50% 66% 34% 50%;
   background-color: #ECB390;
   margin: 0 auto;
 }
 
+.complete-msg__img {
+  position: absolute; left: -200px;
+  width: 150px;
+  top: 0px;
+
+}
+
+.complete-msg__img img{
+width: 100%;
+display: block;
+}

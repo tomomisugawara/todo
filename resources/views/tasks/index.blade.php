@@ -42,7 +42,7 @@
           <thead>
             <tr>
               <th>タイトル</th>
-              <th>期限</th>
+              <!-- <th>期限</th> -->
               <th>編集</th>
               <th>状態</th>
               <th>削除</th>
@@ -53,7 +53,8 @@
             <tr>
               <td>{{ $task->title }}</td>
 
-              <td>{{ $task->formatted_due_date }}</td>
+              <!-- 期限 -->
+              <!-- <td>{{ $task->formatted_due_date }}</td> -->
 
 
               <td><a href="{{ route('tasks.edit', ['folder' => $task->folder_id, 'task' => $task->id]) }}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
@@ -64,7 +65,7 @@
                 <span class="label {{ $task->status_class }}" data-folderid="{{ $task->folder_id }}" data-taskid="{{ $task->id }}">{{ $task->status_label }}</span>
               </td>
 
-              <!--  -->
+              <!-- 削除 -->
               <td><a href="{{ route('task.delete', ['folder' => $task->folder_id, 'task' => $task->id]) }}" onClick="delete_alert(event);">
                   <button class="" type="button" class="btn btn-default" aria-label="Left Align">
                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
@@ -81,7 +82,7 @@
 <div class="complete-msg">
   <p class="complete-msg__text"></p>
   <div class="complete-msg__img">
-    <img src="/image/animal_namakemono.png" alt="">
+    <img src="/image/neko.png" alt="">
   </div>
 </div>
 

@@ -7,16 +7,16 @@ use Illuminate\Validation\Rule;
 
 class EditTask extends CreateTask
 {
-    public function rules()
-    {
-        $rule = parent::rules();
+    // public function rules()
+    // {
+    //     $rule = parent::rules();
 
-        $status_rule = Rule::in(array_keys(Task::STATUS));
+    //     $status_rule = Rule::in(array_keys(Task::STATUS));
 
-        return $rule + [
-            'status' => 'required|' . $status_rule,
-        ];
-    }
+    //     return $rule + [
+    //         'status' => 'required|' . $status_rule,
+    //     ];
+    // }
 
     public function attributes()
     {

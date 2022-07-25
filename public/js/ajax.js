@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', function () {
             $complate_msg.fadeIn(200, function () {
               var $messageNo = Math.floor(Math.random() * $messages.length);
               $('.complete-msg__text').text($messages[$messageNo]);
-              
+
               setTimeout(function () {
                 $complate_msg.fadeOut();
                 $complate_msg.removeClass('animate');
@@ -53,7 +53,6 @@ window.addEventListener('DOMContentLoaded', function () {
           ////////////////////////////////////// */
 
 
-          // 吹き出し終了を書く
 
         } else if (data['status'] === 1) {
           // +++++ 未 +++++
@@ -67,15 +66,6 @@ window.addEventListener('DOMContentLoaded', function () {
         }
       }
     })
-
-    //　吹き出しメソッド
-    // $(function () {
-    //   var new_element = document.createElement('div');
-    //   new_element.addClass('complete');
-    //   $target.after(new_element);
-    // if ($(window).click)
-    // });
-
 
   });
 

@@ -53,7 +53,6 @@ class TaskController extends Controller
     {
         $task = new Task();
         $task->title = $request->title;
-        $task->due_date = $request->due_date;
 
         $folder->tasks()->save($task);
 
@@ -87,8 +86,6 @@ class TaskController extends Controller
     public function edit(Folder $folder, Task $task, EditTask $request)
     {
         $task->title = $request->title;
-        $task->status = $request->status;
-        $task->due_date = $request->due_date;
         $task->save();
 
         $this->checkRelation($folder, $task);

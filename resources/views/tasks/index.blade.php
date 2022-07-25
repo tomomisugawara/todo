@@ -54,7 +54,6 @@
               <td>{{ $task->title }}</td>
 
               <!-- 期限 -->
-              <!-- <td>{{ $task->formatted_due_date }}</td> -->
 
 
               <td><a href="{{ route('tasks.edit', ['folder' => $task->folder_id, 'task' => $task->id]) }}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>

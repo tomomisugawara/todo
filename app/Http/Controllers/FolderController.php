@@ -36,7 +36,7 @@ class FolderController extends Controller
         $folder->tasks()->delete();
         
         // リダイレクト
-        return redirect()->route('home', 
+        return redirect()->route('home',
         // [
         //     'folder' => $folder->id,
         // ]

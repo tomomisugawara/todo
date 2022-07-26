@@ -35,7 +35,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/folders/{folder}/tasks/{task}/softdelete', 'TaskController@delete')->name('task.delete');
 
     Route::post('/folders/{folder}/tasks/{task}/update', 'TaskController@flagUpdate');
+
+
+
+
   });
+  Route::get('/mypage/{id}/profile_edit', 'MypageController@index')->name('mypage.profile_edit');
+
+  Route::post('/mypage/profile_edit', 'MypageController@mypage_update')->name('mypage.update');
 });
 
 

@@ -17,22 +17,23 @@
     <nav class="my-navbar">
       <a class="my-navbar-brand" href="/">ToDo App Tiikotu</a>
       <div class="my-navbar-control">
-      <!-- ログインしてたら画像表示 -->
+
+      {{-- ログインしてたら画像表示 --}}
        @auth
         <div class="hd-prof-img">
-          <!-- file変数 -->
+          {{-- file変数 --}}
+          <a href="{{ route('mypage.profile_edit',['id' => Auth::user()->id]) }}">
             @if (!empty($file))
               <img id="preview" src="data:image/{{$mimeType}};base64,{{$file}}">
             @else
               <img id="preview" src="{{ asset('/storage/img_prof/no-image.png') }}">
             @endif
+          </a>
         </div>
-
-        <!-- <input type="file" name="image" id="imageUpload" accept='image/*'> -->
         @endauth
-        
+
         @if(Auth::check())
-        <span class="my-navbar-item">ようこそ, {{ Auth::user()->name }}さん</span>
+        <a href="{{ route('mypage.profile_edit',['id' => Auth::user()->id]) }}" class="my-navbar-item">ようこそ, {{ Auth::user()->name }}さん</a>
         ｜
         <a href="#" id="logout" class="my-navbar-item">ログアウト</a>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -44,7 +45,6 @@
         <a class="my-navbar-item" href="{{ route('register') }}">会員登録</a>
         @endif
 
-       
       </div>
     </nav>
   </header>

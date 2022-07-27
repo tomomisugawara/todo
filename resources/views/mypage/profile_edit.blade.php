@@ -21,14 +21,14 @@
 
                 <div class="text-center border-bottom pb-3 pt-3" style="font-size: 24px">プロフィール編集</div>
 
-                <form method="POST" action="" class="p-5" enctype="multipart/form-data">
+                <form method="POST" action="{{ route('mypage.update') }}" class="p-5" enctype="multipart/form-data">
                     @csrf
                     {{-- アバター画像 --}}
                     <span class="">
-                        <input type="file" name="img" class="d-none" accept="image/png,image/jpeg,image/gif" id="img">
+                        <input type="file" name="image" class="form-control" accept="image/png,image/jpeg,image/gif" id="img">
                         <label for="avatar" class="d-inline-block">
                             @if(isset(Auth::user()->profile_image))
-                            <img src="{{ Auth::user()->profile_image }}" class="img-circle" style="object-fit: cover; width: 200px; height: 200px;">
+                            <img src="../../{{ Auth::user()->profile_image }}" class="img-circle" style="object-fit: cover; width: 200px; height: 200px;">
                             @else
                             <img src="../../image/no-image.png" class="img-circle" style="object-fit: cover; width: 200px; height: 200px;">
                             @endif
@@ -50,7 +50,7 @@
                     {{-- メールアドレス --}}
                     <div class="form-group row-xs-4">
                         <label for="mail">メールアドレス</label>
-                        <input id="mail" type="text" class="form-control @error('mail') is-invalid @enderror" name="mail" value="{{ old('mail', Auth::user()->mail) }}" required autocomplete="mail" autofocus>
+                        <input id="mail" type="text" class="form-control @error('mail') is-invalid @enderror" name="email" value="{{ old('mail', Auth::user()->email) }}" required autocomplete="mail" autofocus>
                         @error('name')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

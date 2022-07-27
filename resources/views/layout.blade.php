@@ -23,10 +23,10 @@
         <div class="hd-prof-img">
           {{-- file変数 --}}
           <a href="{{ route('mypage.profile_edit',['id' => Auth::user()->id]) }}">
-            @if (!empty($file))
-              <img id="preview" src="data:image/{{$mimeType}};base64,{{$file}}">
+            @if(isset(Auth::user()->profile_image))
+              <img src="../../{{ Auth::user()->profile_image }}">
             @else
-              <img id="preview" src="{{ asset('/storage/img_prof/no-image.png') }}">
+              <img src="../../image/no-image.png">
             @endif
           </a>
         </div>

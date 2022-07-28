@@ -21,8 +21,12 @@ class MypageController extends Controller
     }
 
 
-    public function my_page_update(Request $request)
+    public function my_page_update(Request $request, User $user)
     {
+
+
+        $user->name = $request->name;
+
         if ($request->hasFile('image')) { //イメージが変更されてたら
 
         //// 画像のアップロード ////

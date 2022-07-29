@@ -36,7 +36,7 @@ class MypageController extends Controller
     }
     */
 
-    public function my_page_update(Request $request)
+    public function my_page_update(Request $request, User $user)
     {
         /* 2022/07/28 退避
         if ($request->hasFile('image')) { //イメージが変更されてたら

@@ -7,15 +7,20 @@
 @section('content')
     <div id="profile-edit-form" class="container">
         <div class="row">
+
+
             <div class="col-8 offset-2">
-                @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
-                    </div>
-                @endif
+            @if($errors->any())
+              <div class="alert alert-danger">
+                @foreach($errors->all() as $message)
+                  <p>{{ $message }}</p>
+                @endforeach
+              </div>
+            @endif
             </div>
+
+
         </div>
-j
         <div class="row">
             <div class="col-8 offset-2 bg-white">
 
@@ -23,7 +28,7 @@ j
 
                 <form method="POST" action="{{ route('mypage.update') }}" class="p-5" enctype="multipart/form-data">
                     @csrf
-                    {{-- アバター画像 --}}
+                    {{-- 画像 --}}
                     <span class="">
                         <input type="file" name="image" class="form-control" accept="image/png,image/jpeg,image/gif" id="img">
                         <label for="avatar" class="d-inline-block">
@@ -39,7 +44,7 @@ j
                     {{-- ニックネーム --}}
                     <div class="form-group row-xs-4">
                         <label for="name">ニックネーム</label>
-                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name', Auth::user()->name) }}" required autocomplete="name" autofocus>
+                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name', Auth::user()->name) }}" autocomplete="name" autofocus>
                         @error('name')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -50,7 +55,7 @@ j
                     {{-- メールアドレス --}}
                     <div class="form-group row-xs-4">
                         <label for="mail">メールアドレス</label>
-                        <input id="mail" type="text" class="form-control @error('mail') is-invalid @enderror" name="email" value="{{ old('mail', Auth::user()->email) }}" required autocomplete="mail" autofocus>
+                        <input id="mail" type="text" class="form-control @error('mail') is-invalid @enderror" name="email" value="{{ old('mail', Auth::user()->email) }}" autocomplete="mail" autofocus>
                         @error('name')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

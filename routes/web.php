@@ -42,7 +42,7 @@ Route::group(['middleware' => 'auth'], function () {
 
   Route::get('/mypage/{id}/profile_edit', 'MypageController@index')->name('mypage.profile_edit');
 
-    Route::post('/mypage/profile_edit', 'MypageController@my_page_update')->name('mypage.update');
+    Route::post('/mypage/profile_edit', 'MypageController@myPageUpdate')->name('mypage.update');
 
 });
 

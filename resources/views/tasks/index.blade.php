@@ -55,7 +55,7 @@
               <td>
 
                 <!-- status_class呼び出す、idを取得する -->
-                <span class="label {{ $task->status_class }}" data-folderid="{{ $task->folder_id }}" data-taskid="{{ $task->id }}">{{ $task->status_label }}</span>
+                <span class="label {{ $task->status_class }}" data-folderid="{{ $task->folder_id }}" data-taskid="{{ $task->id }}" style="cursor: hand; cursor:pointer;">{{ $task->status_label }}</span>
               </td>
 
               <td><a href="{{ route('tasks.edit', ['folder' => $task->folder_id, 'task' => $task->id]) }}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
@@ -63,9 +63,8 @@
 
               <!-- 削除 -->
               <td><a href="{{ route('task.delete', ['folder' => $task->folder_id, 'task' => $task->id]) }}" onClick="delete_alert(event);">
-                  <button class="" type="button" class="btn btn-default" aria-label="Left Align">
+                  <button class="btn-task__delete" type="button" class="btn btn-default" aria-label="Left Align">
                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
-
             </tr>
             @endforeach
           </tbody>

@@ -120,19 +120,7 @@ border-radius: 50%;
   border: none;
 }
 
-/* フォルダ・タスク画面 */
-/* ボタンレイアウト */
-button {
-  background-color: #ECB390;
-  border-radius: 3px;
-  border: none;
-}
-
-/* 削除アイコン */
-.glyphicon {
-  /* top: 2px; */
-}
-
+/* /////フォルダ・タスク画面 /////*/
 /* 編集アイコン */
 .glyphicon-pencil:before {
   content: "\270f";
@@ -142,11 +130,18 @@ button {
 }
 
 /* フォルダレイアウト */
-
 .folder-flex {
   /* display: flex; */
   position: relative;
   background-color: #CEE5D0;
+}
+
+/* フォルダカラー */
+a.list-group-item.active,
+a.list-group-item.active:focus,
+a.list-group-item.active:hover {
+  background-color: #CEE5D0;
+  border-color: #CEE5D0;
 }
 
 .folder-flex a {
@@ -157,8 +152,17 @@ button {
   width: 90%;
 }
 
-.btn-folder__delete {
-  width: 10%;
+/* 削除ボタンレイアウト */
+button {
+  background-color: #ECB390;
+  border-radius: 3px;
+  border: none;
+}
+
+/* フォルダ削除アイコン */
+.glyphicon {
+    top: 1px;
+    right: 1px;
 }
 
 .btn-folder {
@@ -181,12 +185,21 @@ button {
   z-index: 3;
 }
 
-/* フォルダカラー */
-a.list-group-item.active,
-a.list-group-item.active:focus,
-a.list-group-item.active:hover {
-  background-color: #CEE5D0;
-  border-color: #CEE5D0;
+/* タスク削除ボタン */
+.btn-task__delete {
+  width: 25px;
+  height: 25px;
+  top: 10px;
+  right: 12px;
+  z-index: 3;
+  padding: 2px;
+}
+
+.table td:nth-child(2), .table td:nth-child(3), .table td:nth-child(4), .table td:nth-child(5){
+    white-space: nowrap;
+    width: 50px;
+    vertical-align: inherit;
+	text-align: center;
 }
 
 .table>thead>tr>th {
@@ -248,7 +261,7 @@ display: block;
 .form-control {
   margin: 0 auto;
   width: 300px;
-  
+
 }
 
 .profile-title {

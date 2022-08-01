@@ -26,8 +26,8 @@
 
             {{-- <a href="{{ route(['route' => ['SoftDeleteUserController.destroy', Auth::user()->id], 'method' => 'delete']) }}"
                 onclick="confirm('本当に退会しますか？');
-                                                event.preventDefault();
-                                                   document.getElementById('withdrawal-form').submit();">
+                event.preventDefault();
+                document.getElementById('withdrawal-form').submit();">
                 退会する
             </a>
 

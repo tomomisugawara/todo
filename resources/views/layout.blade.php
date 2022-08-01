@@ -15,7 +15,7 @@
 <body>
   <header>
     <nav class="my-navbar">
-      <a class="my-navbar-brand" href="/">ToDo App Tiikotu</a>
+      <a class="my-navbar-brand" href="/">TIIKOTU</a>
       <div class="my-navbar-control">
 
       {{-- ログインしてたら画像表示 --}}

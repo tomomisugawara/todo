@@ -45,7 +45,7 @@ body {
 }
 
 .my-navbar-brand {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .my-navbar-brand,
@@ -71,6 +71,17 @@ a.my-navbar-item:hover {
   background-color: #fff;
 }
 
+a {
+  color: black;
+}
+
+ a:hover {
+  /* color: #94B49F; */
+}
+
+.alert-danger {
+  /* background-color: #ECB390; */
+}
 
 /* プロフィール画像 */
 .my-navbar-control{
@@ -102,16 +113,6 @@ border-radius: 50%;
   background-color: #ECB390;
   margin: 0 auto;
 }
-
-/* パスワード変更文字 */
-.text-center a {
-  color: black;
-}
-
-.text-center a:hover {
-  color: #ECB390;
-}
-
 
 /* 送信ボタン */
 .btn-primary {
@@ -165,6 +166,7 @@ button {
 }
 
 .btn-folder__link span {
+  color: black;
   display: inline-block;
   width: 80%;
   word-break: break-word;
@@ -192,11 +194,6 @@ a.list-group-item.active:hover {
   border-bottom: 2px solid #CEE5D0;
 }
 
-/* ラベル */
-.label-danger .active {
-  /* background-color: blue; */
-
-}
 
 /* 完クリック吹き出し */
 .complete {
@@ -231,5 +228,31 @@ a.list-group-item.active:hover {
 .complete-msg__img img{
 width: 100%;
 display: block;
+}
+
+
+/* editページ画像 */
+.avatar-image img{
+  border-radius: 50%;
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+
+}
+
+.p-5 {
+  text-align: center;
+    margin: 0 auto;
+}
+
+.form-control {
+  margin: 0 auto;
+  width: 300px;
+  
+}
+
+.profile-title {
+  text-align: center;
+  font-size: 20px;
 }
 

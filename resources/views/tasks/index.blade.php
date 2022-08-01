@@ -17,7 +17,7 @@
             <a href="{{ route('tasks.index', ['folder' => $folder->id]) }}" class="list-group-item btn-folder__link {{ $current_folder_id === $folder->id ? 'active' : '' }}">
               <span>{{ $folder->title }}</span>
             </a>
-            <!--  -->
+
             <a href="{{ route('folder.delete', ['folder' => $folder->id]) }}" onClick="delete_alert(event);">
               <button class="btn-folder__delete" type="button" class="btn btn-default" aria-label="Left Align">
                 <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
@@ -43,8 +43,8 @@
             <tr>
               <th>タイトル</th>
               <!-- <th>期限</th> -->
-              <th>編集</th>
               <th>状態</th>
+              <th>編集</th>
               <th>削除</th>
             </tr>
           </thead>
@@ -52,16 +52,13 @@
             @foreach($tasks as $task)
             <tr>
               <td>{{ $task->title }}</td>
-
-              <!-- 期限 -->
-
-
-              <td><a href="{{ route('tasks.edit', ['folder' => $task->folder_id, 'task' => $task->id]) }}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
-              </td>
-
               <td>
+
                 <!-- status_class呼び出す、idを取得する -->
                 <span class="label {{ $task->status_class }}" data-folderid="{{ $task->folder_id }}" data-taskid="{{ $task->id }}">{{ $task->status_label }}</span>
+              </td>
+
+              <td><a href="{{ route('tasks.edit', ['folder' => $task->folder_id, 'task' => $task->id]) }}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
               </td>
 
               <!-- 削除 -->

@@ -6,16 +6,16 @@
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="delete_container">
         <div class="card border-dark mb-3">
             <div class="card-header">
-                <h3>退会の確認</h3>
+                <h4>退会の確認</h4>
             </div>
             <div class="card-body">
                 <p class="card-text">退会をすると投稿も全て削除されます。</p>
                 <p class="card-text">それでも退会をしますか？</p>
             </div>
-        </div>
+    </div>
 
         <div class="btn-group">
             {{-- {!! Form::open(['route' => ['/mypage/{id}/delete_confirm.destroy', Auth::user()->id], 'method' => 'delete']) !!} --}}

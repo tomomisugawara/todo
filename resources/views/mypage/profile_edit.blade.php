@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('title')
-    プロフィール編集
+    プロフィール
 @endsection
 
 @section('content')
@@ -22,9 +22,9 @@
 
         </div>
         <div class="row">
-            <div class="col-8 offset-2 bg-white">
+            <div class="col-4">
 
-                <div class="profile-title">プロフィール</div>
+                <h2 class="profile-title">プロフィール</h2>
 
                 <form method="POST" action="{{ route('mypage.update') }}" class="p-5" enctype="multipart/form-data">
                     @csrf
@@ -42,7 +42,7 @@
 
 
                     {{-- ニックネーム --}}
-                    <div class="form-group row-xs-4">
+                    <div class="panel-heading">
                         <label for="name">ニックネーム</label>
                         <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
                             name="name" value="{{ old('name', Auth::user()->name) }}" autocomplete="name" autofocus>
@@ -54,7 +54,7 @@
                     </div>
 
                     {{-- メールアドレス --}}
-                    <div class="form-group row-xs-4">
+                    <div class="panel-heading">
                         <label for="mail">メールアドレス</label>
                         <input id="mail" type="text" class="form-control @error('mail') is-invalid @enderror"
                             name="email" value="{{ old('mail', Auth::user()->email) }}" autocomplete="mail" autofocus>

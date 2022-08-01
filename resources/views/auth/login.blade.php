@@ -3,12 +3,24 @@
 @section('content')
 <div class="container">
 
-  <div class="balloon ">
-    texttexttexttextetexttexttext<br>
-    texttexttexttextetexttexttext<br>
-    texttexttexttextetexttexttext<br>
-    texttexttexttextetexttexttext<br>
+  <div class="balloon login-text">
+	<h5>ちいさなことからこつこつと。</h5><br>
+    そんな思いから誕生したのがTODOアプリ『TIIKOTU』にゃ！<br>
+	TIIKOTUは期限を気にせずいつでも気軽につかってほしいのにゃ。<br>
+	タスクを達成できたらTIIKOTUがほめたり、ほめなかったり、<br>
+    たまに独り言をつぶやいたりするにゃ。<br>
+	TIIKOTUと一緒に楽しくすごそうにゃ!<br>
   </div>
+
+  	{{-- <div class="login-comment">
+	毎日早起きする。なんて決意したけど、結局三日坊主になって落ち込んだことはないかにゃ？<br>
+    Tiikotuはあるのにゃ・・・<br>
+    そんなときは、出来そうなことからはじめてみるにゃ！<br>
+    前日より５分早く起きる、まめに手を洗う、スリッパを揃える、とかにゃ。<br>
+    当たり前のようで、だいじなことにゃ。<br>
+  </div> --}}
+
+  <img class="login-neko" src="../image/neko.png" alt="">
 
   <div class="row">
     <div class="col col-md-offset-3 col-md-6">

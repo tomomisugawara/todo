@@ -2,93 +2,55 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/bootflat/2.0.4/css/bootflat.min.css');
 
 body {
+   /* ドット斜め */
+  background-color: #FCF8E8;
+  background-image:
+  radial-gradient(#CEE5D0 20%, transparent 20%),
+  radial-gradient(#CEE5D0 20%, transparent 20%);
+  background-size: 300px 300px;
+  background-position: 0 0, 150px 150px;
 
   /* background-color: #FCF8E8; */
-
-  /* ストライプ */
-  /* background-color: #FCF8E8;
-  background-image:
-    linear-gradient(-90deg, #fff 50%, transparent 50%);
-  background-size: 14px 14px;
-  background-size: 150px; */
-
-  /* ドット斜め */
-  background-color: #fff;
-  background-image:
-  radial-gradient(#CDF0EA 20%, transparent 20%),
-  radial-gradient(#CDF0EA 20%, transparent 20%);
-  background-size: 400px 400px; /*background-positionの2倍*/
-  background-position: 0 0, 200px 200px;
-
-  /* background-image:
-  radial-gradient(290px 300px , rgb(205, 240, 234) 20%, transparent 20%),
-  radial-gradient(800px 780px , rgb(205, 240, 234) 20%, transparent 20%),
-  radial-gradient(1000px 990px, rgb(205, 240, 234) 20%, transparent 20%),
-  radial-gradient(400px 380px , rgb(205, 240, 234) 20%, transparent 20%),
-  radial-gradient(750px 750px , rgb(205, 240, 234) 20%, transparent 20%),
-  radial-gradient(100px 100px , rgb(205, 240, 234) 20%, transparent 20%);
-background-size:
-  1230px 1280px,
-  810px 910px,
-  1470px 990px,
-  1200px 1700px,
-  1520px 1200px,
-  1100px 1300px;
-background-position:
-  -300px -550px,
-  -200px 100px,
-  50px 510px,
-  -200px -550px,
-  -180px -250px,
-  130px -150px; */
 }
 
 * {
   box-sizing: border-box;
 }
 
-
-
-
 .panel-default .panel-heading {
-  background-color: #CDF0EA
-
+  background-color: #94B49F
 }
 
 .navbar {
   margin: 2rem 0 2.5rem 0;
 }
 
-
 .my-navbar {
   align-items: center;
-  background: #CDF0EA;
+  background-color: #94B49F;
   display: flex;
   height: 6rem;
   justify-content: space-between;
   padding: 0 2%;
   margin-bottom: 3rem;
-
-
-
-  background-image: url(../image/icon2.jpg);
-  /* background-repeat: no-repeat; */
   max-width: 100%;
+
   clip-path: ellipse(100% 95% at top);
-  height: 200px;
-  position: relative;
-
+  height: 150px;
 }
 
 .my-navbar-brand {
-  font-size: 20px;
-}
-
-.my-navbar-brand {
+  font-size: 30px;
   color: black;
+  /* border-radius: 50%; */
+  /* border-radius: 50% 50% / 50% 50%; */
+  /* background-color: #FAF4B7; */
+  /* margin: 0 auto; */
+  /* width: 80px;
+  height: 80px; */
+  text-align: center;
+  align-items: center;
 }
-
-
 
 .my-navbar-item {
   color: black;
@@ -118,54 +80,86 @@ a {
 }
 
  a:hover {
-  /* color: #94B49F; */
-}
-
-.alert-danger {
-  /* background-color: #ECB390; */
+  color: #ECB390;
 }
 
 .text-right {
     text-align: center;
 }
 
-/* プロフィール画像 */
-.my-navbar-control{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.hd-prof-img {
-  width: 40px;height: 40px;
-  /* border-radius: 50%; */
-  margin-right: 10px;
-}
-.hd-prof-img img{
-display: block;
-width: 100%;
-height: 100%;
-object-fit: cover;
-border-radius: 50%;
+/* 送信ボタン */
+.btn-primary {
+  background-color: #94B49F;
+  border: none;
 }
 
+.btn :hover {
+	background-color: #fff;
+}
 
-/* ログイン */
+/* rogin画面 */
 .balloon  {
   /* width: calc(100% - 40%); */
   /* width: 300px; */
   text-align: center;
   padding: 70px 14px;
-  /* border-radius: 70% 30% 80% 20% / 50% 66% 34% 50%; */
   border-radius: 50% 50% / 50% 50%;
-  background-color: #F6C6EA;
+  background-color: #ECB390;
+  /* background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); */
   margin: 0 auto;
+  margin-bottom: 3rem;
 }
 
-/* 送信ボタン */
-.btn-primary {
-  background-color: #F6C6EA;
-  border: none;
+.login-neko {
+    margin-left: 30%;
+    left: -80px;
+    width: 120px;
+    top: 454px;
 }
+
+.form-group {
+  text-align: center;
+}
+
+.row {
+	margin-bottom: 3rem;
+}
+
+/*///////////////////
+   .steps{
+  width: 100px;/*1フレーム分の横幅
+  height: 100px;1フレーム分の縦幅
+  background: url("../img/steps.png") no-repeat;背景画像の読み込み
+  animation: stepsline 1s steps(3) forwards;
+	stepsline→アニメーション名
+    1s→アニメーションをする時間
+    step→（）の中には、アニメーション制作コマ数-1の値を入れる（例：4コマ-1コマ=3コマ）
+    forwards→最後の形を維持
+}
+
+@keyframes stepsline {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -300px 0;ニメーション制作コマ数から1コマ分引いた横幅を指定。
+（例：今回は1フレーム横幅100pxで制作しているので全体の400px-100px=300px⇒-300px）を指定。
+  }
+}
+///////////////////*/
+
+.steps {
+	width: 100px;
+	height: 100px;
+	background: url("../../image/nikukyuu3.png") no-repeat;
+    animation: walk 7s steps(7, end) infinite;
+  }
+
+  @keyframes walk {
+  to {
+  transform: translateX(675px);
+  }
+  }
 
 /* /////フォルダ・タスク画面 /////*/
 /* 編集アイコン */
@@ -187,8 +181,8 @@ border-radius: 50%;
 a.list-group-item.active,
 a.list-group-item.active:focus,
 a.list-group-item.active:hover {
-  background-color: #CDF0EA;
-  border-color: #CDF0EA;
+  background-color: #CEE5D0;
+  border-color: #CEE5D0;
 }
 
 .folder-flex a {
@@ -201,7 +195,7 @@ a.list-group-item.active:hover {
 
 /* 削除ボタンレイアウト */
 button {
-  background-color: #F6C6EA;
+  /* background-color: #F6C6EA; */
   border-radius: 3px;
   border: none;
 }
@@ -258,7 +252,8 @@ button {
 /* 完 */
 .label-primary, .complete {
   color: black;
-  background-color: #FAF4B7;
+  /* background-color: #FAF4B7; */
+    background-image: linear-gradient(to top, #FCF8E8 0%, #ECB390 100%);
 }
 /* 未 */
 .badge-default, .label-default {
@@ -269,26 +264,25 @@ button {
 .complete-msg {
   display: none;
   position: fixed;
-  width: 50;
-  height: 50;
-  z-index: 10;
+  width: 50%;
+  height: 50px;
+  z-index: 3;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   width: 300px;
-  text-align: center;
-  padding: 70px 14px;
-  border-radius: 70% 30% 80% 20% / 50% 66% 34% 50%;
-  background-color: #ECB390;
   margin: 0 auto;
-  padding: auto;
+  text-align: center;
+  padding: 90px 12px;
+  border-radius: 50% 50% / 50% 50%;
+  background-color: #ECB390;
+  /* background-image: linear-gradient(to top, #FCF8E8 0%, #ECB390 100%); */
 }
 
 .complete-msg__img {
   position: absolute; left: -80px;
   width: 120px;
-
   top: 0px;
 }
 
@@ -322,20 +316,26 @@ display: block;
 }
 
 
-/* rogin画面 */
-.login_container {
-  
+/* プロフィール画像 */
+.my-navbar-control{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hd-prof-img {
+  width: 40px;height: 40px;
+  /* border-radius: 50%; */
+  margin-right: 10px;
+}
+.hd-prof-img img{
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 50%;
 }
 
-.login-neko {
-	width: 25%;
-  margin-left: 230px;
-}
-
-.login_container {
-  
-}
-
-.form-group {
-  text-align: center;
+.btn-group .btn-danger {
+	background-color: #ECB390;
+	border: #ECB390;
 }

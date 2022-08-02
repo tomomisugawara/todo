@@ -2,30 +2,8 @@
 
 @section('content')
 <div class="container">
-
-  <div class="balloon login-text">
-	<h5>ちいさなことからこつこつと。</h5><br>
-    そんな思いから誕生したのがTODOアプリ『TIIKOTU』にゃ！<br>
-	  TIIKOTUは期限を気にせずいつでも気軽につかってほしいのにゃ。<br>
-    前日より５分早く起きる、帰ったら手を洗う、スリッパを揃えるとか、何でもいいのにゃ。<br>
-	  タスクを達成できたらTIIKOTUがほめたり、ほめなかったり、<br>
-    たまに独り言をつぶやいたりするにゃ。<br>
-	  TIIKOTUと一緒に楽しくすごそうにゃ!<br>
-  </div>
-
-  	{{-- <div class="login-comment">
-	毎日早起きする。なんて決意したけど、結局三日坊主になって落ち込んだことはないかにゃ？<br>
-    Tiikotuはあるのにゃ・・・<br>
-    そんなときは、出来そうなことからはじめてみるにゃ！<br>
-    前日より５分早く起きる、まめに手を洗う、スリッパを揃えるとか何でもいいのにゃ。<br>
-    当たり前のようで、だいじなことにゃ。<br>
-  </div> --}}
-
-
   <div class="login_container">
-
   <img class="login-neko" src="../image/neko.png" alt="">
-
   <div class="row">
     <div class="col col-md-offset-3 col-md-6">
       <nav class="panel panel-default">
@@ -59,8 +37,17 @@
       </div>
     </div>
   </div>
-
   </div>
-
+  <div class="balloon login-text">
+	<h5>ちいさなことからこつこつと。</h5><br>
+    そんな思いから誕生したのがTODOアプリ『TIIKOTU』にゃ！<br>
+	  TIIKOTUは期限を気にせずいつでも気軽につかってほしいのにゃ。<br>
+    たとえば、前日より５分早く起きるとか、帰ったら手を洗うとか、<br>
+	スリッパを揃えるとか、何でもいいのにゃ。<br>
+	  タスクを達成できたらTIIKOTUがほめてくれたり、くれなかったり、<br>
+    たまに独り言をつぶやいたりするにゃ。<br>
+	  TIIKOTUと一緒に楽しくすごそうにゃ!<br>
+  </div>
 </div>
 @endsection
+

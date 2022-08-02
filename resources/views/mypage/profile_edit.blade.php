@@ -1,89 +1,89 @@
 @extends('layout')
 
 @section('title')
-    プロフィール
+プロフィール
 @endsection
 
 @section('content')
-    <div id="profile-edit-form" class="container">
-        <div class="row">
+<div id="profile-edit-form" class="container">
+    <div class="row">
 
-
-            <div class="col-8 offset-2">
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        @foreach ($errors->all() as $message)
-                            <p>{{ $message }}</p>
-                        @endforeach
-                    </div>
-                @endif
+        <div class="col-8 offset-2">
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                @foreach ($errors->all() as $message)
+                <p>{{ $message }}</p>
+                @endforeach
             </div>
-
-
+            @endif
         </div>
-        <div class="row">
-            <div class="col-4">
+    </div>
 
-                <h2 class="profile-title">プロフィール</h2>
-
-                <form method="POST" action="{{ route('mypage.update') }}" class="p-5" enctype="multipart/form-data">
-                    @csrf
-                    {{-- 画像 --}}
-                    <span class="avatar-image">
-                        <input type="file" name="image" class="form-control" accept="image/png,image/jpeg,image/gif" id="avatar" style="display:none;">
-                        <label for="avatar" class="d-inline-block">
-                            @if (isset(Auth::user()->profile_image))
+    <div class="row">
+        <div class="col col-md-offset-3 col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">プロフィール</div>
+                <div class="panel-body">
+                    <form method="POST" action="{{ route('mypage.update') }}" class="p-5" enctype="multipart/form-data">
+                        @csrf
+                        {{-- 画像 --}}
+                        <span class="avatar-image">
+                            <input type="file" name="image" class="form-control" accept="image/png,image/jpeg,image/gif" id="avatar" style="display:none;">
+                            <label for="avatar" class="d-inline-block">
+                                @if (isset(Auth::user()->profile_image))
                                 <img src="../../{{ Auth::user()->profile_image }}" class="img-circle">
-                            @else
+                                @else
                                 <img src="../../image/no-image.png" class="img-circle">
-                            @endif
-                        </label>
-                    </span>
+                                @endif
+                            </label>
+                        </span>
 
-
-                    {{-- ニックネーム --}}
-                    <div class="panel-heading">
-                        <label for="name">ニックネーム</label>
-                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
-                            name="name" value="{{ old('name', Auth::user()->name) }}" autocomplete="name" autofocus>
-                        @error('name')
+                        {{-- ニックネーム --}}
+                        <div class="panel-title">
+                            <label for="name">ニックネーム</label>
+                        </div>
+                        <div class="panel-body">
+                            <input id="name" type="text" class="form-control panel-body @error('name') is-invalid @enderror" name="name" value="{{ old('name', Auth::user()->name) }}" autocomplete="name" autofocus>
+                            @error('name')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
-                        @enderror
-                    </div>
+                            @enderror
+                        </div>
 
-                    {{-- メールアドレス --}}
-                    <div class="panel-heading">
-                        <label for="mail">メールアドレス</label>
-                        <input id="mail" type="text" class="form-control @error('mail') is-invalid @enderror"
-                            name="email" value="{{ old('mail', Auth::user()->email) }}" autocomplete="mail" autofocus>
-                        @error('name')
+                        {{-- メールアドレス --}}
+                        <div class="panel-title">
+                            <label for="mail">メールアドレス</label>
+                        </div>
+                        <div class="panel-body">
+                            <input id="mail" type="text" class="form-control @error('mail') is-invalid @enderror" name="email" value="{{ old('mail', Auth::user()->email) }}" autocomplete="mail" autofocus>
+                            @error('name')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
-                        @enderror
-                    </div>
+                            @enderror
+                        </div>
 
-                        <div class="form-group mb-0 mt-3 center-block">
+                        {{-- 保存 --}}
+                        <div class="form-group">
                             <button type="submit" class="btn btn-primary">
                                 保存
                             </button>
                         </div>
 
-
                         {{-- 退会 --}}
-                    <div class="">
-                        <a href="{{ route('delete_confirm',['id' => Auth::user()->id]) }}" type="submit" class="">
-                            退会
-                        </a>
-
+                        <div class="form-group">
+                            <a href="{{ route('delete_confirm',['id' => Auth::user()->id]) }}" type="submit" class="">
+                                退会
+                            </a>
+                        </div>
+                </div>
                 </form>
             </div>
         </div>
     </div>
-@endsection
+    @endsection
 
 
 
-@include('share.img.scripts')
+    @include('share.img.scripts')

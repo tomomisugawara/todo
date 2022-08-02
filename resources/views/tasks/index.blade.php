@@ -5,7 +5,7 @@
   <div class="row">
     <div class="col col-md-4">
       <nav class="panel panel-default">
-        <div class="panel-heading">フォルダ</div>
+        <div class="panel-heading text-center">フォルダ</div>
         <div class="panel-body">
           <a href="{{ route('folders.create') }}" class="btn btn-default btn-block">
             フォルダを追加する
@@ -30,7 +30,7 @@
     </div>
     <div class="column col-md-8">
       <div class="panel panel-default">
-        <div class="panel-heading">タスク</div>
+        <div class="panel-heading text-center">タスク</div>
         <div class="panel-body">
           <div class="text-right">
             <a href="{{ route('tasks.create', ['folder' => $current_folder_id]) }}" class="btn btn-default btn-block">

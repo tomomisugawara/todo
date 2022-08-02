@@ -2,6 +2,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/bootflat/2.0.4/css/bootflat.min.css');
 
 body {
+
   /* background-color: #FCF8E8; */
 
   /* ストライプ */
@@ -14,41 +15,81 @@ body {
   /* ドット斜め */
   background-color: #fff;
   background-image:
-  radial-gradient(#FCF8E8 20%, transparent 20%),
-  radial-gradient(#FCF8E8 20%, transparent 20%);
-  background-size: 400px 400px; /* background-positionの2倍*/
+  radial-gradient(#CDF0EA 20%, transparent 20%),
+  radial-gradient(#CDF0EA 20%, transparent 20%);
+  background-size: 400px 400px; /*background-positionの2倍*/
   background-position: 0 0, 200px 200px;
+
+  /* background-image:
+  radial-gradient(290px 300px , rgb(205, 240, 234) 20%, transparent 20%),
+  radial-gradient(800px 780px , rgb(205, 240, 234) 20%, transparent 20%),
+  radial-gradient(1000px 990px, rgb(205, 240, 234) 20%, transparent 20%),
+  radial-gradient(400px 380px , rgb(205, 240, 234) 20%, transparent 20%),
+  radial-gradient(750px 750px , rgb(205, 240, 234) 20%, transparent 20%),
+  radial-gradient(100px 100px , rgb(205, 240, 234) 20%, transparent 20%);
+background-size:
+  1230px 1280px,
+  810px 910px,
+  1470px 990px,
+  1200px 1700px,
+  1520px 1200px,
+  1100px 1300px;
+background-position:
+  -300px -550px,
+  -200px 100px,
+  50px 510px,
+  -200px -550px,
+  -180px -250px,
+  130px -150px; */
 }
 
 * {
   box-sizing: border-box;
 }
 
-/* header */
-.panel-default>.panel-heading {
-  background-color: #94B49F;
-  color: black;
+
+
+
+.panel-default .panel-heading {
+  background-color: #CDF0EA
+
 }
 
 .navbar {
   margin: 2rem 0 2.5rem 0;
 }
 
+
 .my-navbar {
   align-items: center;
-  background: #94B49F;
+  background: #CDF0EA;
   display: flex;
   height: 6rem;
   justify-content: space-between;
   padding: 0 2%;
   margin-bottom: 3rem;
+
+
+
+  background-image: url(../image/icon2.jpg);
+  /* background-repeat: no-repeat; */
+  max-width: 100%;
+  clip-path: ellipse(100% 95% at top);
+  height: 200px;
+  position: relative;
+
 }
 
 .my-navbar-brand {
   font-size: 20px;
 }
 
-.my-navbar-brand,
+.my-navbar-brand {
+  color: black;
+}
+
+
+
 .my-navbar-item {
   color: black;
 }
@@ -108,7 +149,7 @@ border-radius: 50%;
 }
 
 
-/* ログイン　吹き出し */
+/* ログイン */
 .balloon  {
   /* width: calc(100% - 40%); */
   /* width: 300px; */
@@ -116,13 +157,13 @@ border-radius: 50%;
   padding: 70px 14px;
   /* border-radius: 70% 30% 80% 20% / 50% 66% 34% 50%; */
   border-radius: 50% 50% / 50% 50%;
-  background-color: #ECB390;
+  background-color: #F6C6EA;
   margin: 0 auto;
 }
 
 /* 送信ボタン */
 .btn-primary {
-  background-color: #ECB390;
+  background-color: #F6C6EA;
   border: none;
 }
 
@@ -146,8 +187,8 @@ border-radius: 50%;
 a.list-group-item.active,
 a.list-group-item.active:focus,
 a.list-group-item.active:hover {
-  background-color: #CEE5D0;
-  border-color: #CEE5D0;
+  background-color: #CDF0EA;
+  border-color: #CDF0EA;
 }
 
 .folder-flex a {
@@ -160,7 +201,7 @@ a.list-group-item.active:hover {
 
 /* 削除ボタンレイアウト */
 button {
-  background-color: #ECB390;
+  background-color: #F6C6EA;
   border-radius: 3px;
   border: none;
 }
@@ -214,9 +255,15 @@ button {
 }
 
 
-/* 完クリック吹き出し */
-.complete {
-  background-color: #ECB390;
+/* 完 */
+.label-primary, .complete {
+  color: black;
+  background-color: #FAF4B7;
+}
+/* 未 */
+.badge-default, .label-default {
+  background-color: #F9F9F9;
+  border: none;
 }
 
 .complete-msg {
@@ -235,13 +282,14 @@ button {
   border-radius: 70% 30% 80% 20% / 50% 66% 34% 50%;
   background-color: #ECB390;
   margin: 0 auto;
+  padding: auto;
 }
 
 .complete-msg__img {
-  position: absolute; left: -200px;
-  width: 150px;
-  top: 0px;
+  position: absolute; left: -80px;
+  width: 120px;
 
+  top: 0px;
 }
 
 .complete-msg__img img{
@@ -273,11 +321,21 @@ display: block;
 	text-align: center;
 }
 
-/* .login-comment{
-	text-align: center;
-} */
+
+/* rogin画面 */
+.login_container {
+  
+}
 
 .login-neko {
-	width: 20%;
+	width: 25%;
+  margin-left: 230px;
+}
 
+.login_container {
+  
+}
+
+.form-group {
+  text-align: center;
 }

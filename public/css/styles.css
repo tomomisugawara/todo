@@ -2,376 +2,418 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/bootflat/2.0.4/css/bootflat.min.css');
 
 body {
-  /* ドット斜め */
-  background-color: #FCF8E8;
-  background-image:
-    radial-gradient(#CEE5D0 20%, transparent 20%),
-    radial-gradient(#CEE5D0 20%, transparent 20%);
-  background-size: 300px 300px;
-  background-position: 0 0, 150px 150px;
-
-  /* background-color: #FCF8E8; */
+	/* ドット斜め */
+	background-color: #FCF8E8;
+	background-image:
+		radial-gradient(#CEE5D0 20%, transparent 20%),
+		radial-gradient(#CEE5D0 20%, transparent 20%);
+	background-size: 300px 300px;
+	background-position: 0 0, 150px 150px;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .panel-default .panel-heading {
-  background-color: #94B49F
+	background-color: #94B49F
 }
 
 .navbar {
-  margin: 2rem 0 2.5rem 0;
+	margin: 2rem 0 2.5rem 0;
 }
 
 .my-navbar {
-  align-items: center;
-  background-color: #94B49F;
-  /* display: flex; */
-  height: 6rem;
-  justify-content: space-between;
-  padding: 0 2%;
-  margin-bottom: 3rem;
-  max-width: 100%;
-  justify-content: center;
+	/* align-items: center; */
+	background-color: #94B49F;
+	/* display: flex; */
+	height: 6rem;
+	/* justify-content: space-between; */
+	padding: 0 2%;
+	margin-bottom: 3rem;
+	max-width: 100%;
+	justify-content: center;
 
-  clip-path: ellipse(100% 95% at top);
-  height: 150px;
-  text-align: center;
+	clip-path: ellipse(100% 95% at top);
+	height: 190px;
+	text-align: center;
+	padding: 20px;
 }
 
 .my-navbar-brand {
-  font-size: 30px;
-  color: black;
-  /* border-radius: 50%; */
-  /* border-radius: 50% 50% / 50% 50%; */
-  /* background-color: #FAF4B7; */
-  /* margin: 0 auto; */
-  /* width: 80px;
+	font-size: 30px;
+	color: black;
+	/* border-radius: 50%; */
+	/* border-radius: 50% 50% / 50% 50%; */
+	/* background-color: #FAF4B7; */
+	/* margin: 0 auto; */
+	/* width: 80px;
   height: 80px; */
-  text-align: center;
-  align-items: center;
+	text-align: center;
+	align-items: center;
 }
 
 .my-navbar-item {
-  color: black;
+	color: black;
+	display: flex;
+	justify-content: center;
+	margin: 3px;
+}
+
+.my-navbar-item-logout {
+	margin: 10px;
 }
 
 .my-navbar-brand:hover,
 a.my-navbar-item:hover {
-  color: #ffffff;
+	color: #ECB390;
+}
+
+/*////////// プロフィール画像 //////////*/
+.my-navbar-control {
+	/* display: flex; */
+	align-items: center;
+	/* justify-content: space-between; */
+	justify-content: center;
+}
+
+.hd-prof-img {
+	width: 50px;
+	height: 50px;
+	/* border-radius: 50%; */
+	margin: 0 auto;
+}
+
+.hd-prof-img  img {
+	width: 100%;
+	height: 100%;
+	/* object-fit: cover; */
+	border-radius: 50%;
+	/* text-align: center; */
+}
+
+.btn-group .btn-danger {
+	background-color: #ECB390;
+	border: #ECB390;
 }
 
 .table td:nth-child(2),
 .table td:nth-child(3),
 .table td:nth-child(4),
 .table td:nth-child(5) {
-  white-space: nowrap;
-  width: 45px;
+	white-space: nowrap;
+	width: 45px;
 }
 
 .form-control[disabled],
 .form-control[readonly] {
-  background-color: #fff;
-  margin: 0 auto;
+	background-color: #fff;
+	margin: 0 auto;
 }
 
 a {
-  color: black;
+	color: black;
 }
 
 a:hover {
-  color: #ECB390;
+	color: #ECB390;
 }
 
 .text-right {
-  text-align: center;
+	text-align: center;
 }
 
 /* 送信ボタン */
 .btn-primary {
-  background-color: #94B49F;
-  border: none;
+	background-color: #94B49F;
+	border: none;
 }
 
 .btn :hover {
-  background-color: #fff;
+	background-color: #fff;
 }
 
 /* rogin画面 */
 .balloon {
-  /* width: calc(100% - 40%); */
-  /* width: 300px; */
-  text-align: center;
-  padding: 70px 14px;
-  border-radius: 50% 50% / 50% 50%;
-  background-color: #ECB390;
-  /* background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); */
-  margin: 0 auto;
-  margin-bottom: 3rem;
+	/* width: calc(100% - 40%); */
+	/* width: 300px; */
+	text-align: center;
+	padding: 70px 14px;
+	border-radius: 50% 50% / 50% 50%;
+	background-color: #ECB390;
+	/* background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); */
+	margin: 0 auto;
+	margin-bottom: 3rem;
 }
 
 .login-neko {
-  margin-left: 30%;
-  left: -80px;
-  width: 120px;
-  top: 454px;
+	margin-left: 30%;
+	left: -80px;
+	width: 120px;
+	top: 454px;
 }
 
 .form-group {
-  text-align: center;
+	text-align: center;
 }
 
 .row {
-  margin-bottom: 3rem;
+	margin-bottom: 3rem;
 }
 
 /* /////フォルダ・タスク画面 /////*/
 /* 編集アイコン */
 .glyphicon-pencil:before {
-  content: "\270f";
-  margin-left: 5px;
-  top: 2px;
-  /* color: black; */
+	content: "\270f";
+	margin-left: 5px;
+	top: 2px;
+	/* color: black; */
 }
 
 /* フォルダレイアウト */
 .folder-flex {
-  /* display: flex; */
-  position: relative;
-  background-color: #CEE5D0;
+	/* display: flex; */
+	position: relative;
+	background-color: #CEE5D0;
 }
 
 /* フォルダカラー */
 a.list-group-item.active,
 a.list-group-item.active:focus,
 a.list-group-item.active:hover {
-  background-color: #CEE5D0;
-  border-color: #CEE5D0;
+	background-color: #CEE5D0;
+	border-color: #CEE5D0;
 }
 
 .folder-flex a {
-  width: 100%;
+	width: 100%;
 }
 
 .list-group-item {
-  width: 90%;
+	width: 90%;
 }
 
 /* 削除ボタンレイアウト */
 button {
-  /* background-color: #F6C6EA; */
-  border-radius: 3px;
-  border: none;
+	/* background-color: #F6C6EA; */
+	border-radius: 3px;
+	border: none;
 }
 
 /* フォルダ削除アイコン */
 .glyphicon {
-  top: 1px;
-  right: 1px;
+	top: 1px;
+	right: 1px;
 }
 
 .btn-folder {
-  position: relative;
+	position: relative;
 }
 
 .btn-folder__link span {
-  color: black;
-  display: inline-block;
-  width: 80%;
-  word-break: break-word;
+	color: black;
+	display: inline-block;
+	width: 80%;
+	word-break: break-word;
 }
 
 .btn-folder__delete {
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  top: 10px;
-  right: 12px;
-  z-index: 3;
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 10px;
+	right: 12px;
+	z-index: 3;
 }
 
 /* タスク削除ボタン */
 .btn-task__delete {
-  width: 25px;
-  height: 25px;
-  top: 10px;
-  right: 12px;
-  z-index: 3;
-  padding: 2px;
+	width: 25px;
+	height: 25px;
+	top: 10px;
+	right: 12px;
+	z-index: 3;
+	padding: 2px;
 }
 
 .table td:nth-child(2),
 .table td:nth-child(3),
 .table td:nth-child(4),
 .table td:nth-child(5) {
-  white-space: nowrap;
-  width: 50px;
-  vertical-align: inherit;
-  text-align: center;
+	white-space: nowrap;
+	width: 50px;
+	vertical-align: inherit;
+	text-align: center;
 }
 
 .table>thead>tr>th {
-  vertical-align: bottom;
-  border-bottom: 2px solid #CEE5D0;
+	vertical-align: bottom;
+	border-bottom: 2px solid #CEE5D0;
 }
 
 
 /* 完 */
 .label-primary,
 .complete {
-  color: black;
-  /* background-color: #FAF4B7; */
-  background-image: linear-gradient(to top, #FCF8E8 0%, #ECB390 100%);
+	color: black;
+	/* background-color: #FAF4B7; */
+	background-image: linear-gradient(to top, #FCF8E8 0%, #ECB390 100%);
 }
 
 /* 未 */
 .badge-default,
 .label-default {
-  background-color: #F9F9F9;
-  border: none;
+	background-color: #F9F9F9;
+	border: none;
 }
 
 /*////////// 完了メッセージ ////////// */
 .complete-msg {
-  display: none;
-  position: fixed;
-  width: 50%;
-  height: 50px;
-  z-index: 3;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  padding: 90px 12px;
-  border-radius: 50%;
-  /* border-radius: 30% 70% 35% 65% / 50% 50% 50% 50%; */
-  text-align: center;
-  margin: 0 auto;
-  background-color: #ECB390;
-
-  /* width: 300px; */
-  /* border-radius: 50% 50% / 50% 50%; */
-  /* background-image: linear-gradient(to top, #FCF8E8 0%, #ECB390 100%); */
+	display: none;
+	/* opacity: 0; */
+	position: fixed;
+	width: 100%;
+	max-width: 500px;
+	/* height: 50px; */
+	z-index: 3;
+	top: 50%;
+	left: 50%;
+	padding: 0 20px;
+	transform: translate(-50%, -50%);
+	/* border-radius: 30% 70% 35% 65% / 50% 50% 50% 50%; */
+	margin: 0 auto;
+	/* transition: all 0.5s; */
+	/* width: 300px; */
+	/* border-radius: 50% 50% / 50% 50%; */
+	/* background-image: linear-gradient(to top, #FCF8E8 0%, #ECB390 100%); */
 
 }
 
+.complete-msg.animate {
+	/* display: block; */
+	/* opacity: 1; */
+}
+
 .complete-msg__text {
-  bottom: 30px;
+	position: relative;
+	text-align: center;
+	/* bottom: 30px; */
+	padding: 90px 12px;
+	border-radius: 50%;
+	background-color: #ECB390;
+	width: calc(100% - 120px);
+	left: 120px;
 
 }
 
 .complete-msg__img {
-  position: absolute;
-  left: -80px;
-  width: 120px;
-  top: 50px;
+	position: absolute;
+	left: 20px;
+	width: 120px;
+	top: 50%;
+	transform: translate(0%, -50%);
 }
 
 .complete-msg__img img {
-  width: 100%;
-  display: block;
+	width: 100%;
+	display: block;
 }
 
 
 /*////////// editページ画像 //////////*/
 .avatar-image img {
-  border-radius: 50%;
-  object-fit: cover;
-  width: 200px;
-  height: 200px;
+	border-radius: 50%;
+	object-fit: cover;
+	width: 200px;
+	height: 200px;
 
 }
 
 .p-5 {
-  text-align: center;
-  margin: 0 auto;
+	text-align: center;
+	margin: 0 auto;
 }
 
 .profile-title {
-  text-align: center;
-  font-size: 20px;
+	text-align: center;
+	font-size: 20px;
 }
 
 .delete_container {
-  text-align: center;
+	text-align: center;
 }
 
 
-/*////////// プロフィール画像 //////////*/
-.my-navbar-control {
-  /* display: flex; */
-  align-items: center;
-  justify-content: space-between;
+.footer_flax {
+	display: flex;
+	align-items: center;
+	width: 100%;
 }
 
-.hd-prof-img {
-  width: 40px;
-  height: 40px;
-  /* border-radius: 50%; */
-  margin-right: 10px;
-}
-
-.hd-prof-img img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  text-align: center;
-}
-
-.btn-group .btn-danger {
-  background-color: #ECB390;
-  border: #ECB390;
-}
 
 /*////////// 肉球 //////////*/
 .steps {
-  width: 100vw;
-  /*1フレーム分の横幅*/
-  height: 100px;
-  /*1フレーム分の縦幅*/
-  background: url("../image/nikukyuu.png") no-repeat;
-  /*背景画像の読み込み*/
-  animation: stepsline 7s steps(14, jump-start) infinite;
-  /*stepsline→アニメーション名
+	width: 100%;
+	max-width: calc(100% - 100px);
+	/*1フレーム分の横幅*/
+	height: 60px;
+	/*1フレーム分の縦幅*/
+	background: url("../image/nikukyuu_long.png");
+	background-repeat: repeat-x;
+	background-size: cover;
+
+	/*背景画像の読み込み*/
+	animation: stepsline 7s steps(7, jump-start) infinite;
+	/*stepsline→アニメーション名
     1s→アニメーションをする時間
     step→（）の中には、1フレーム分最後に余白を持たせてループをさせたいので、アニメーション制作コマ数+1の値を入れる（例：4コマ+1コマ=5コマ）
     infinite→無限ループ*/
-  background-size: cover;
+
+
 }
+
+@media screen and (min-width: 768px) {
+	.steps {
+		height: 100px;
+		max-width: calc(100% - 260px);
+		animation: stepsline 7s steps(14, jump-start) infinite;
+	}
+}
+
 
 @keyframes stepsline {
-  from {
-    width: 0%;
-  }
-  50% {
-    width: 50%;
-  }
-  to {
-    width: 100%;
-  }
+	from {
+		width: 0%;
+		/* background-position: 0 0; */
+	}
+
+	50% {
+		width: 50%;
+		/* background-position: 50% 0; */
+	}
+
+	to {
+		width: 100%;
+		/* background-position: 100% 0; */
+	}
 }
 
-.footer_flax {
-  display: flex;
-  align-items: center;
-}
 
 .kuroneko {
-  width: 40%;
-  object-fit: contain;
+	/* width: 40%; */
+	width: 100px;
+	object-fit: contain;
 }
+
 @media screen and (min-width: 768px) {
-  .kuroneko{
-  width: 15%;
-  }
+	.kuroneko {
+		/* width: 15%; */
+		width: 260px;
+	}
 }
 
 .copy {
-  text-align: center;
-  background-color: #94B49F;
-  padding: 8px;
+	text-align: center;
+	background-color: #94B49F;
+	padding: 8px;
 }

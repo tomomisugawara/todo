@@ -33,14 +33,14 @@
 
         @if(Auth::check())
         <a href="{{ route('mypage.profile_edit',['id' => Auth::user()->id]) }}" class="my-navbar-item">ようこそ, {{ Auth::user()->name }}さん</a>
-        ｜
-        <a href="#" id="logout" class="my-navbar-item">ログアウト</a>
+
+        <a href="#" id="logout" class="my-navbar-item-logout">ログアウト</a>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
           @csrf
         </form>
         @else
         <a class="my-navbar-item" href="{{ route('login') }}">ログイン</a>
-        ｜
+
         <a class="my-navbar-item" href="{{ route('register') }}">会員登録</a>
         @endif
       </div>
@@ -59,18 +59,21 @@
   </script>
   @endif
   @yield('scripts')
-</body>
 
-<footer>
+
   {{-- 肉球HTML --}}
   <div class="footer_flax">
     <div class="steps"></div>
     <img class="kuroneko" src="../../../../image/kuroneko.png" alt="">
   </div>
 
+
+<footer>
   <div class="copy">
     <small>&copy; 2022 t-sugawara</small>
   </div>
 </footer>
+
+</body>
 
 </html>

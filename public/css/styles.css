@@ -2,11 +2,11 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/bootflat/2.0.4/css/bootflat.min.css');
 
 body {
-   /* ドット斜め */
+  /* ドット斜め */
   background-color: #FCF8E8;
   background-image:
-  radial-gradient(#CEE5D0 20%, transparent 20%),
-  radial-gradient(#CEE5D0 20%, transparent 20%);
+    radial-gradient(#CEE5D0 20%, transparent 20%),
+    radial-gradient(#CEE5D0 20%, transparent 20%);
   background-size: 300px 300px;
   background-position: 0 0, 150px 150px;
 
@@ -28,15 +28,17 @@ body {
 .my-navbar {
   align-items: center;
   background-color: #94B49F;
-  display: flex;
+  /* display: flex; */
   height: 6rem;
   justify-content: space-between;
   padding: 0 2%;
   margin-bottom: 3rem;
   max-width: 100%;
+  justify-content: center;
 
   clip-path: ellipse(100% 95% at top);
   height: 150px;
+  text-align: center;
 }
 
 .my-navbar-brand {
@@ -72,19 +74,19 @@ a.my-navbar-item:hover {
 .form-control[disabled],
 .form-control[readonly] {
   background-color: #fff;
-   margin: 0 auto;
+  margin: 0 auto;
 }
 
 a {
   color: black;
 }
 
- a:hover {
+a:hover {
   color: #ECB390;
 }
 
 .text-right {
-    text-align: center;
+  text-align: center;
 }
 
 /* 送信ボタン */
@@ -94,11 +96,11 @@ a {
 }
 
 .btn :hover {
-	background-color: #fff;
+  background-color: #fff;
 }
 
 /* rogin画面 */
-.balloon  {
+.balloon {
   /* width: calc(100% - 40%); */
   /* width: 300px; */
   text-align: center;
@@ -111,10 +113,10 @@ a {
 }
 
 .login-neko {
-    margin-left: 30%;
-    left: -80px;
-    width: 120px;
-    top: 454px;
+  margin-left: 30%;
+  left: -80px;
+  width: 120px;
+  top: 454px;
 }
 
 .form-group {
@@ -122,44 +124,8 @@ a {
 }
 
 .row {
-	margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
-
-/*///////////////////
-   .steps{
-  width: 100px;/*1フレーム分の横幅
-  height: 100px;1フレーム分の縦幅
-  background: url("../img/steps.png") no-repeat;背景画像の読み込み
-  animation: stepsline 1s steps(3) forwards;
-	stepsline→アニメーション名
-    1s→アニメーションをする時間
-    step→（）の中には、アニメーション制作コマ数-1の値を入れる（例：4コマ-1コマ=3コマ）
-    forwards→最後の形を維持
-}
-
-@keyframes stepsline {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: -300px 0;ニメーション制作コマ数から1コマ分引いた横幅を指定。
-（例：今回は1フレーム横幅100pxで制作しているので全体の400px-100px=300px⇒-300px）を指定。
-  }
-}
-///////////////////*/
-
-.steps {
-	width: 100px;
-	height: 100px;
-	background: url("../../image/nikukyuu3.png") no-repeat;
-    animation: walk 7s steps(7, end) infinite;
-  }
-
-  @keyframes walk {
-  to {
-  transform: translateX(675px);
-  }
-  }
 
 /* /////フォルダ・タスク画面 /////*/
 /* 編集アイコン */
@@ -202,8 +168,8 @@ button {
 
 /* フォルダ削除アイコン */
 .glyphicon {
-    top: 1px;
-    right: 1px;
+  top: 1px;
+  right: 1px;
 }
 
 .btn-folder {
@@ -236,11 +202,14 @@ button {
   padding: 2px;
 }
 
-.table td:nth-child(2), .table td:nth-child(3), .table td:nth-child(4), .table td:nth-child(5){
-    white-space: nowrap;
-    width: 50px;
-    vertical-align: inherit;
-	text-align: center;
+.table td:nth-child(2),
+.table td:nth-child(3),
+.table td:nth-child(4),
+.table td:nth-child(5) {
+  white-space: nowrap;
+  width: 50px;
+  vertical-align: inherit;
+  text-align: center;
 }
 
 .table>thead>tr>th {
@@ -250,17 +219,21 @@ button {
 
 
 /* 完 */
-.label-primary, .complete {
+.label-primary,
+.complete {
   color: black;
   /* background-color: #FAF4B7; */
-    background-image: linear-gradient(to top, #FCF8E8 0%, #ECB390 100%);
+  background-image: linear-gradient(to top, #FCF8E8 0%, #ECB390 100%);
 }
+
 /* 未 */
-.badge-default, .label-default {
+.badge-default,
+.label-default {
   background-color: #F9F9F9;
   border: none;
 }
 
+/*////////// 完了メッセージ ////////// */
 .complete-msg {
   display: none;
   position: fixed;
@@ -271,29 +244,39 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 300px;
-  margin: 0 auto;
-  text-align: center;
   padding: 90px 12px;
-  border-radius: 50% 50% / 50% 50%;
+  border-radius: 50%;
+  /* border-radius: 30% 70% 35% 65% / 50% 50% 50% 50%; */
+  text-align: center;
+  margin: 0 auto;
   background-color: #ECB390;
+
+  /* width: 300px; */
+  /* border-radius: 50% 50% / 50% 50%; */
   /* background-image: linear-gradient(to top, #FCF8E8 0%, #ECB390 100%); */
+
+}
+
+.complete-msg__text {
+  bottom: 30px;
+
 }
 
 .complete-msg__img {
-  position: absolute; left: -80px;
+  position: absolute;
+  left: -80px;
   width: 120px;
-  top: 0px;
+  top: 50px;
 }
 
-.complete-msg__img img{
-width: 100%;
-display: block;
+.complete-msg__img img {
+  width: 100%;
+  display: block;
 }
 
 
-/* editページ画像 */
-.avatar-image img{
+/*////////// editページ画像 //////////*/
+.avatar-image img {
   border-radius: 50%;
   object-fit: cover;
   width: 200px;
@@ -312,30 +295,83 @@ display: block;
 }
 
 .delete_container {
-	text-align: center;
+  text-align: center;
 }
 
 
-/* プロフィール画像 */
-.my-navbar-control{
-  display: flex;
+/*////////// プロフィール画像 //////////*/
+.my-navbar-control {
+  /* display: flex; */
   align-items: center;
   justify-content: space-between;
 }
+
 .hd-prof-img {
-  width: 40px;height: 40px;
+  width: 40px;
+  height: 40px;
   /* border-radius: 50%; */
   margin-right: 10px;
 }
-.hd-prof-img img{
-display: block;
-width: 100%;
-height: 100%;
-object-fit: cover;
-border-radius: 50%;
+
+.hd-prof-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  text-align: center;
 }
 
 .btn-group .btn-danger {
-	background-color: #ECB390;
-	border: #ECB390;
+  background-color: #ECB390;
+  border: #ECB390;
+}
+
+/*////////// 肉球 //////////*/
+.steps {
+  width: 100vw;
+  /*1フレーム分の横幅*/
+  height: 100px;
+  /*1フレーム分の縦幅*/
+  background: url("../image/nikukyuu.png") no-repeat;
+  /*背景画像の読み込み*/
+  animation: stepsline 7s steps(14, jump-start) infinite;
+  /*stepsline→アニメーション名
+    1s→アニメーションをする時間
+    step→（）の中には、1フレーム分最後に余白を持たせてループをさせたいので、アニメーション制作コマ数+1の値を入れる（例：4コマ+1コマ=5コマ）
+    infinite→無限ループ*/
+  background-size: cover;
+}
+
+@keyframes stepsline {
+  from {
+    width: 0%;
+  }
+  50% {
+    width: 50%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.footer_flax {
+  display: flex;
+  align-items: center;
+}
+
+.kuroneko {
+  width: 40%;
+  object-fit: contain;
+}
+@media screen and (min-width: 768px) {
+  .kuroneko{
+  width: 15%;
+  }
+}
+
+.copy {
+  text-align: center;
+  background-color: #94B49F;
+  padding: 8px;
 }

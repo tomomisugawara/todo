@@ -1,3 +1,5 @@
+// マイページ画像
+
 window.addEventListener('DOMContentLoaded', function () {
   $(function () {
     $('input[type=file]').change(function () {

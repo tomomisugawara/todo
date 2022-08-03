@@ -1,3 +1,5 @@
+// 完了コメント
+
 window.addEventListener('DOMContentLoaded', function () {
 
 

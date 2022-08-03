@@ -17,15 +17,15 @@
       <a class="my-navbar-brand" href="/">TIIKOTU</a>
       <div class="my-navbar-control">
 
-      {{-- ログインしてたら画像表示 --}}
-       @auth
+        {{-- ログインしてたら画像表示 --}}
+        @auth
         <div class="hd-prof-img">
           {{-- file変数 --}}
           <a href="{{ route('mypage.profile_edit',['id' => Auth::user()->id]) }}">
             @if(isset(Auth::user()->profile_image))
-              <img src="../../../../{{ Auth::user()->profile_image }}">
+            <img src="../../../../{{ Auth::user()->profile_image }}">
             @else
-              <img src="../../image/no-image.png">
+            <img src="../../../../image/no-image.png">
             @endif
           </a>
         </div>
@@ -60,9 +60,17 @@
   @endif
   @yield('scripts')
 </body>
+
 <footer>
+  {{-- 肉球HTML --}}
+  <div class="footer_flax">
+    <div class="steps"></div>
+    <img class="kuroneko" src="../../../../image/kuroneko.png" alt="">
+  </div>
 
-  <div class="steps"></div>
-
+  <div class="copy">
+    <small>&copy; 2022 t-sugawara</small>
+  </div>
 </footer>
+
 </html>

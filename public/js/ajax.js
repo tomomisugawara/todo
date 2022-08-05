@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", function () {
         var $complate_msg = $(".complete-msg"), // 完了メッセージ
             $complate_msg_time = 2000; // 表示時間
         var $arr_msg = [
-            //// '素晴らしいのにゃ！','生きてるだけでほめられたいのにゃ。','コアラのマーチより、パックンチョの方が先輩にゃ。','天才なにゃの？','毎日寝て過ごしたいにゃ、もう何もする気が起きないにゃ。'
+            //// '素晴らしいのにゃ！','生きてるだけでほめられたいのにゃ。','コアラのマーチより、パックンチョの方が先輩にゃ。','天才なにゃの？'"'毎日寝て過ごしたいにゃ、もう何もする気が起きないにゃ。'
             ["/image/kuroneko-back.png", "おつかれさまにゃ！"],
             [ "/image/neko.png",
                 "リンカーンは「たいていの人は、決意した程度だけ幸福になれる」と言ったそうにゃ。",],
@@ -92,4 +92,3 @@ window.addEventListener("DOMContentLoaded", function () {
         reader.readAsDataURL(e.target.files[0]);
     });
 });
-// .label-dangerアクティブクラス

@@ -57,7 +57,7 @@ class RegisterController extends Controller
 			////7.31追記
 			'email' => 'required|string|email|max:255|unique:users,email,NULL,id,deleted_at,NULL',
 
-            'password' => 'required|string|min:4|confirmed',
+            'password' => 'required|string|min:8|confirmed',
         ], [], [
             'name' => 'ユーザー名',
             'email' => 'メールアドレス',

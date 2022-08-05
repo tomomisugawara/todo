@@ -1,7 +1,10 @@
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/bootflat/2.0.4/css/bootflat.min.css');
 
+html,
 body {
+	font-family: 'Nunito', sans-serif;
+	height: 100%;
 	/* ドット斜め */
 	background-color: #FCF8E8;
 	background-image:
@@ -9,6 +12,23 @@ body {
 		radial-gradient(#CEE5D0 20%, transparent 20%);
 	background-size: 300px 300px;
 	background-position: 0 0, 150px 150px;
+}
+
+.wrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+footer {
+	margin-top: auto;
+}
+
+.copy {
+	text-align: center;
+	background-color: #94B49F;
+	padding: 8px;
 }
 
 * {
@@ -43,14 +63,12 @@ body {
 .my-navbar-brand {
 	font-size: 30px;
 	color: black;
-	/* border-radius: 50%; */
-	/* border-radius: 50% 50% / 50% 50%; */
-	/* background-color: #FAF4B7; */
-	/* margin: 0 auto; */
-	/* width: 80px;
-  height: 80px; */
 	text-align: center;
 	align-items: center;
+}
+
+.my-navbar_block {
+	display: inline-block;
 }
 
 .my-navbar-item {
@@ -58,10 +76,6 @@ body {
 	display: flex;
 	justify-content: center;
 	margin: 3px;
-}
-
-.my-navbar-item-logout {
-	margin: 10px;
 }
 
 .my-navbar-brand:hover,
@@ -84,7 +98,7 @@ a.my-navbar-item:hover {
 	margin: 0 auto;
 }
 
-.hd-prof-img  img {
+.hd-prof-img img {
 	width: 100%;
 	height: 100%;
 	/* object-fit: cover; */
@@ -121,6 +135,7 @@ a:hover {
 
 .text-right {
 	text-align: center;
+	margin-top: 15px;
 }
 
 /* 送信ボタン */
@@ -135,6 +150,10 @@ a:hover {
 
 /* rogin画面 */
 .balloon {
+	margin-top: 15px;
+}
+
+.login-text {
 	/* width: calc(100% - 40%); */
 	/* width: 300px; */
 	text-align: center;
@@ -155,10 +174,11 @@ a:hover {
 
 .form-group {
 	text-align: center;
+	margin-bottom: 0px;
 }
 
-.row {
-	margin-bottom: 3rem;
+.form-group_Withdraw {
+	margin-top: 15px;
 }
 
 /* /////フォルダ・タスク画面 /////*/
@@ -172,7 +192,6 @@ a:hover {
 
 /* フォルダレイアウト */
 .folder-flex {
-	/* display: flex; */
 	position: relative;
 	background-color: #CEE5D0;
 }
@@ -368,8 +387,6 @@ button {
     1s→アニメーションをする時間
     step→（）の中には、1フレーム分最後に余白を持たせてループをさせたいので、アニメーション制作コマ数+1の値を入れる（例：4コマ+1コマ=5コマ）
     infinite→無限ループ*/
-
-
 }
 
 @media screen and (min-width: 768px) {
@@ -410,10 +427,4 @@ button {
 		/* width: 15%; */
 		width: 260px;
 	}
-}
-
-.copy {
-	text-align: center;
-	background-color: #94B49F;
-	padding: 8px;
 }

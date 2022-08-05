@@ -22,15 +22,14 @@
             @endif
             <form
                 action="{{ route('tasks.edit', ['folder' => $task->folder_id, 'task' => $task->id]) }}"
-                method="POST"
-            >
+                method="POST">
               @csrf
               <div class="form-group">
                 <label for="title">タイトル</label>
                 <input type="text" class="form-control" name="title" id="title"
                        value="{{ old('title') ?? $task->title }}" />
               </div>
-            
+
 
               <div class="text-right">
                 <button type="submit" class="btn btn-primary">送信</button>

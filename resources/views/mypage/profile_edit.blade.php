@@ -72,7 +72,7 @@
                         </div>
 
                         {{-- 退会 --}}
-                        <div class="form-group">
+                        <div class="form-group_Withdraw">
                             <a href="{{ route('delete_confirm',['id' => Auth::user()->id]) }}" type="submit" class="">
                                 退会
                             </a>

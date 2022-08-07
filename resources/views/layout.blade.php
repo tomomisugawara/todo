@@ -34,17 +34,21 @@
 
           @if(Auth::check())
           <div class="my-navbar_block">
+
             <a href="{{ route('mypage.profile_edit',['id' => Auth::user()->id]) }}" class="my-navbar-item">ようこそ, {{ Auth::user()->name }}さん</a>
 
             <a href="#" id="logout" class="my-navbar-item">ログアウト</a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+
           </div>
           @csrf
           </form>
           @else
+		  <div class="my-navbar_block-inner">
           <a class="my-navbar-item" href="{{ route('login') }}">ログイン</a>
 
           <a class="my-navbar-item" href="{{ route('register') }}">会員登録</a>
+		  </div>
           @endif
         </div>
       </nav>

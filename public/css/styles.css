@@ -71,6 +71,10 @@ footer {
 	display: inline-block;
 }
 
+.my-navbar_block-inner {
+	display: inline-block;
+}
+
 .my-navbar-item {
 	color: black;
 	display: flex;
@@ -80,7 +84,7 @@ footer {
 
 .my-navbar-brand:hover,
 a.my-navbar-item:hover {
-	color: #ECB390;
+	color: #fff;
 }
 
 /*////////// プロフィール画像 //////////*/
@@ -104,7 +108,13 @@ a.my-navbar-item:hover {
 	/* object-fit: cover; */
 	border-radius: 50%;
 	/* text-align: center; */
+	color: #ECB390;
 }
+
+.hd-prof-img :hover {
+	opacity: 0.7;
+}
+
 
 .btn-group .btn-danger {
 	background-color: #ECB390;
@@ -121,7 +131,7 @@ a.my-navbar-item:hover {
 
 .form-control[disabled],
 .form-control[readonly] {
-	background-color: #fff;
+	background-color: #ECB390;
 	margin: 0 auto;
 }
 
@@ -130,7 +140,7 @@ a {
 }
 
 a:hover {
-	color: #ECB390;
+	color: #94B49F;
 }
 
 .text-right {
@@ -139,13 +149,9 @@ a:hover {
 }
 
 /* 送信ボタン */
-.btn-primary {
+.btn-success {
 	background-color: #94B49F;
 	border: none;
-}
-
-.btn :hover {
-	background-color: #fff;
 }
 
 /* rogin画面 */
@@ -212,14 +218,12 @@ a.list-group-item.active:hover {
 	width: 90%;
 }
 
-/* 削除ボタンレイアウト */
 button {
 	/* background-color: #F6C6EA; */
 	border-radius: 3px;
 	border: none;
 }
 
-/* フォルダ削除アイコン */
 .glyphicon {
 	top: 1px;
 	right: 1px;
@@ -245,7 +249,6 @@ button {
 	z-index: 3;
 }
 
-/* タスク削除ボタン */
 .btn-task__delete {
 	width: 25px;
 	height: 25px;
@@ -299,24 +302,18 @@ button {
 	left: 50%;
 	padding: 0 20px;
 	transform: translate(-50%, -50%);
-	/* border-radius: 30% 70% 35% 65% / 50% 50% 50% 50%; */
 	margin: 0 auto;
-	/* transition: all 0.5s; */
-	/* width: 300px; */
-	/* border-radius: 50% 50% / 50% 50%; */
-	/* background-image: linear-gradient(to top, #FCF8E8 0%, #ECB390 100%); */
-
+	/* transition: all 0.2s ease; */
 }
 
 .complete-msg.animate {
-	/* display: block; */
+	display: block;
 	/* opacity: 1; */
 }
 
 .complete-msg__text {
 	position: relative;
 	text-align: center;
-	/* bottom: 30px; */
 	padding: 90px 12px;
 	border-radius: 50%;
 	background-color: #ECB390;
@@ -345,7 +342,7 @@ button {
 	object-fit: cover;
 	width: 200px;
 	height: 200px;
-
+	margin-bottom: 15px;
 }
 
 .p-5 {

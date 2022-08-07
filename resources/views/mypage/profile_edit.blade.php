@@ -66,7 +66,7 @@
 
                         {{-- 保存 --}}
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-success"">
                                 保存
                             </button>
                         </div>

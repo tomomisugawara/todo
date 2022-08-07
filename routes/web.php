@@ -42,10 +42,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::post('/mypage/profile_edit', 'MypageController@myPageUpdate')->name('mypage.update');
 
 	//// 7.31追記 ////
-	// Route::resource('/mypage/{id}/delete_confirm', 'SoftDeleteUserController', ['only' => ['show', 'destroy']]); //destroyを追記
-	// Route::resource('/mypage/{id}/delete_confirm', 'Auth\SoftDeleteUserController')->only([
-	// 	'show', 'destroy'
-	// ]);
 	Route::resource('users', 'Auth\SoftDeleteUserController')->only([
 		'show', 'destroy'
 	]);

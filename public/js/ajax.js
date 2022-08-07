@@ -14,12 +14,18 @@ window.addEventListener("DOMContentLoaded", function () {
         var $arr_msg = [
             //// '素晴らしいのにゃ！','生きてるだけでほめられたいのにゃ。','コアラのマーチより、パックンチョの方が先輩にゃ。','天才なにゃの？'"'毎日寝て過ごしたいにゃ、もう何もする気が起きないにゃ。'
             ["/image/kuroneko-back.png", "おつかれさまにゃ！"],
-            [ "/image/neko.png",
-                "リンカーンは「たいていの人は、決意した程度だけ幸福になれる」と言ったそうにゃ。",],
-			["/image/nikukyuu-onehand.png", "タスク達成おめでとうにゃ！",],
+            [
+                "/image/neko.png",
+                "リンカーンは「たいていの人は、決意した程度だけ幸福になれる」と言ったそうにゃ。",
+            ],
+            ["/image/nikukyuu-onehand.png", "タスク達成おめでとうにゃ！"],
+            ["/image/nikukyuu-onehand.png", "aaaa"],
+            ["/image/nikukyuu-onehand.png", "bbb"],
+            ["/image/nikukyuu-onehand.png", "ccc"],
+            ["/image/nikukyuu-onehand.png", "ddd"],
         ];
 
-        let $re;
+        let $timer;
 
         $.ajax({
             headers: {
@@ -42,30 +48,90 @@ window.addEventListener("DOMContentLoaded", function () {
                     $target.addClass("complete");
 
                     // 表示アニメーション
-                    if (!$complate_msg.hasClass("animate")) {
-                        //何回押してもアニーメーションが表示されない
-                        $complate_msg.addClass("animate");
-                        $complate_msg.fadeIn(200, function () {
-                            var $messageNo = Math.floor(
-                                Math.random() * $arr_msg.length
-                            );
-                            $(".complete-msg__img img").attr(
-                                "src",
-                                $arr_msg[$messageNo][0]
-                            );
-                            $(".complete-msg__text").text(
-                                $arr_msg[$messageNo][1]
-                            );
+                    // if (!$complate_msg.hasClass("animate")) {
+                    //何回押してもアニーメーションが表示されない
+                    $complate_msg.addClass("animate");
+                    // $complate_msg
+                    //     .clearQueue()
+                    //     .stop(true, true)
+                    //     .fadeIn(200, function () {
+                    //         var $messageNo = Math.floor(
+                    //             Math.random() * $arr_msg.length
+                    //         );
+                    //         $(".complete-msg__img img").attr(
+                    //             "src",
+                    //             $arr_msg[$messageNo][0]
+                    //         );
+                    //         $(".complete-msg__text").text(
+                    //             $arr_msg[$messageNo][1]
+                    //         );
 
-                            // clearTimeout($re);
-                            $re = setTimeout(function () {
+                    //         // if ($timer != false) clearTimeout($timer);
+                    //         // $timer = setTimeout(function () {
+                    //         //     $complate_msg
+                    //         //         .stop(true, true)
+                    //         //         .fadeOut(200, function () {
+                    //         //             $complate_msg.removeClass("animate");
+                    //         //             // $(".complete-msg__img img").attr('src','');
+                    //         //             $(".complete-msg__text").empty();
+                    //         //         });
+                    //         // }, $complate_msg_time);
+                    //     })
+                    //     .delay($complate_msg_time)
+                    //     .fadeOut(200, function () {
+                    //         $complate_msg.removeClass("animate");
+                    //         // $(".complete-msg__img img").attr('src','');
+                    //         $(".complete-msg__text").empty();
+                    //     });
+
+                    $complate_msg
+                        .css("opacity", "0")
+                        .clearQueue()
+                        .stop()
+                        .animate(
+                            {
+                                opacity: 1,
+                            },
+                            100,
+                            function () {
+                                var $messageNo = Math.floor(
+                                    Math.random() * $arr_msg.length
+                                );
+                                $(".complete-msg__img img").attr(
+                                    "src",
+                                    $arr_msg[$messageNo][0]
+                                );
+                                $(".complete-msg__text").text(
+                                    $arr_msg[$messageNo][1]
+                                );
+                            }
+                        )
+                        .animate(
+                            // delayでも可？
+                            {
+                                opacity: 1,
+                            },
+                            $complate_msg_time
+                        )
+                        .animate(
+                            {
+                                opacity: 0,
+                            },
+                            100,
+                            function () {
                                 $complate_msg.removeClass("animate");
-                                // $(".complete-msg__img img").attr('src','');
+                                $(".complete-msg__img img").attr("src", "");
                                 $(".complete-msg__text").empty();
-                                $complate_msg.fadeOut(200);
-                            }, $complate_msg_time);
-                        });
-                    }
+                            }
+                        );
+
+                    // .fadeOut(200, function () {
+                    //     $complate_msg.removeClass("animate");
+                    //     // $(".complete-msg__img img").attr('src','');
+                    //     $(".complete-msg__text").empty();
+                    // });
+
+                    // }
 
                     /* //////////////////////////////////////
 					現状、メッセージ表示中は、何回押しても設定した秒数のみ表示される。

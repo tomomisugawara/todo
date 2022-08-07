@@ -12,7 +12,7 @@
                 <h4>退会の確認</h4>
             </div>
             <div class="card-body">
-                <p class="card-text">退会をすると投稿も全て削除されます。</p>
+                <p class="card-text">退会をすると全て削除されます。</p>
                 <p class="card-text">それでも退会をしますか？</p>
             </div>
     </div>
@@ -20,7 +20,7 @@
         <div class="btn-group">
             {{-- {!! Form::open(['route' => ['/mypage/{id}/delete_confirm.destroy', Auth::user()->id], 'method' => 'delete']) !!} --}}
 			 {!! Form::open(['route' => ['users.destroy', Auth::user()->id], 'method' => 'delete']) !!}
-            {!! Form::submit('退会する', ['class' => 'btn btn-danger']) !!}
+            {!! Form::submit('退会', ['class' => 'btn btn-danger']) !!}
             {!! Form::close() !!}
 
 
@@ -37,7 +37,7 @@
 
 
             <div class="ml-3">
-                <a href="/" class="btn btn-primary">キャンセルする</a>
+                <a href="/" class="btn btn-success"">キャンセル</a>
             </div>
         </div>
     </div>

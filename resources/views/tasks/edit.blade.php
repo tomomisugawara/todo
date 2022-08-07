@@ -32,7 +32,7 @@
 
 
               <div class="text-right">
-                <button type="submit" class="btn btn-primary">送信</button>
+                <button type="submit" class="btn btn-success"">送信</button>
               </div>
             </form>
           </div>

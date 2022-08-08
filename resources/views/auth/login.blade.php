@@ -6,6 +6,7 @@
 <div class="balloon">
     <div class="balloon login-text">
       <h5>ちいさなことからこつこつと。</h5><br>
+      そんな思いからついた名前が「TIIKOTU」にゃ!<br>
       TIIKOTUは期限を気にせずいつでも気軽につかってほしいのにゃ。<br>
       たとえば、前日より５分早く起きるとか、帰ったら手を洗うとか、<br>
       スリッパを揃えるとか、何でもいいのにゃ。<br>
@@ -14,7 +15,7 @@
       TIIKOTUと一緒に楽しくすごそうにゃ!<br>
     </div>
   </div>
-  
+
   <div class="login_container">
     <img class="login-neko" src="../image/neko.png" alt="">
     <div class="row">

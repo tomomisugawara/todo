@@ -12,17 +12,17 @@ window.addEventListener("DOMContentLoaded", function () {
         var $complate_msg = $(".complete-msg"), // 完了メッセージ
             $complate_msg_time = 2000; // 表示時間
         var $arr_msg = [
-            //// '素晴らしいのにゃ！','生きてるだけでほめられたいのにゃ。','コアラのマーチより、パックンチョの方が先輩にゃ。','天才なにゃの？'"'毎日寝て過ごしたいにゃ、もう何もする気が起きないにゃ。'
             ["/image/kuroneko-back.png", "おつかれさまにゃ！"],
             [
                 "/image/neko.png",
                 "リンカーンは「たいていの人は、決意した程度だけ幸福になれる」と言ったそうにゃ。",
             ],
             ["/image/nikukyuu-onehand.png", "タスク達成おめでとうにゃ！"],
-            ["/image/nikukyuu-onehand.png", "aaaa"],
-            ["/image/nikukyuu-onehand.png", "bbb"],
-            ["/image/nikukyuu-onehand.png", "ccc"],
-            ["/image/nikukyuu-onehand.png", "ddd"],
+            ["/image/nikukyuu-onehand.png", "素晴らしいのにゃ！"],
+            ["/image/nikukyuu-onehand.png", "天才なにゃの？"],
+            ["/image/nikukyuu-onehand.png", "生きてるだけでほめられたいのにゃ。"],
+            ["/image/nikukyuu-onehand.png", "コアラのマーチより、パックンチョの方が先輩にゃ。"],
+            ["/image/nikukyuu-onehand.png", "毎日寝て過ごしたいにゃ、もう何もする気が起きないにゃ"],
         ];
 
         let $timer;

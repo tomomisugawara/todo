@@ -37,6 +37,7 @@ footer {
 }
 
 .panel-default .panel-heading {
+	text-align: center;
 	background-color: #94B49F
 }
 
@@ -165,18 +166,17 @@ a:hover {
 	/* width: 300px; */
 	text-align: center;
 	padding: 70px 14px;
-	/* border-radius: 50% 50% / 50% 50%; */
+	border-radius: 50% 50% / 50% 50%;
 	border: 1rem solid #ECB390;
 	/* background-color: #ECB390; */
 	/* background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); */
 	margin: 0 auto;
-	margin-bottom: 3rem;
 }
 
 .login-neko {
-	margin-left: 30%;
+	margin-left: 25%;
 	left: -80px;
-	width: 120px;
+	width: 150px;
 	top: 454px;
 }
 
@@ -335,6 +335,7 @@ button {
 .complete-msg__img img {
 	width: 100%;
 	display: block;
+	object-fit: cover;
 }
 
 

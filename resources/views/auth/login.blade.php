@@ -15,7 +15,7 @@
   </div>
 
   <div class="login_container">
-    <img class="login-neko" src="../image/neko.png" alt="">
+    <img class="login-neko" src="../image/neko1.png" alt="">
     <div class="row">
       <div class="col col-md-offset-3 col-md-6">
         <nav class="panel panel-default">

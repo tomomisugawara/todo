@@ -10,19 +10,21 @@ window.addEventListener("DOMContentLoaded", function () {
         var $taskId = $(this).data("taskid");
 
         var $complate_msg = $(".complete-msg"), // 完了メッセージ
-            $complate_msg_time = 2000; // 表示時間
+            $complate_msg_time = 3000; // 表示時間
         var $arr_msg = [
-            ["/image/kuroneko-back.png", "おつかれさまにゃ！"],
+            ["/image/neko2.png", "おつかれさまにゃ！"],
             [
-                "/image/neko.png",
+                "/image/neko3.png",
                 "リンカーンは「たいていの人は、決意した程度だけ幸福になれる」と言ったそうにゃ。",
             ],
-            ["/image/nikukyuu-onehand.png", "タスク達成おめでとうにゃ！"],
-            ["/image/nikukyuu-onehand.png", "素晴らしいのにゃ！"],
-            ["/image/nikukyuu-onehand.png", "天才なにゃの？"],
-            ["/image/nikukyuu-onehand.png", "生きてるだけでほめられたいのにゃ。"],
-            ["/image/nikukyuu-onehand.png", "コアラのマーチより、パックンチョの方が先輩にゃ。"],
-            ["/image/nikukyuu-onehand.png", "毎日寝て過ごしたいにゃ、もう何もする気が起きないにゃ"],
+            ["/image/neko2.png", "タスク達成おめでとうにゃ！"],
+            ["/image/neko6.png", "素晴らしいのにゃ！"],
+            ["/image/neko2.png", "天才なにゃの？"],
+            ["/image/neko4.png", "毎日寝て過ごしたいにゃ。"],
+            ["/image/neko1.png", "応援してるのにゃ。"],
+            ["/image/neko5.png", "来世は人ににゃりたいの。"],
+            ["/image/neko5.png", "ルルル～。"],
+            ["/image/neko3.png","明日死ぬかの様に生きよ。永遠に生きるかの様に学べ。マハトマ・ガンジーの名言にゃ。"],
         ];
 
         let $timer;

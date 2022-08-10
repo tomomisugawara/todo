@@ -12,19 +12,16 @@ window.addEventListener("DOMContentLoaded", function () {
         var $complate_msg = $(".complete-msg"), // 完了メッセージ
             $complate_msg_time = 3000; // 表示時間
         var $arr_msg = [
-            ["/image/neko2.png", "おつかれさまにゃ！"],
-            [
-                "/image/neko3.png",
-                "リンカーンは「たいていの人は、決意した程度だけ幸福になれる」と言ったそうにゃ。",
-            ],
-            ["/image/neko2.png", "タスク達成おめでとうにゃ！"],
-            ["/image/neko6.png", "素晴らしいのにゃ！"],
-            ["/image/neko2.png", "天才なにゃの？"],
-            ["/image/neko4.png", "毎日寝て過ごしたいにゃ。"],
             ["/image/neko1.png", "応援してるのにゃ。"],
+            ["/image/neko2.png", "タスク達成おめでとうにゃ！"],
+            [ "/image/neko3.png", "リンカーンは「たいていの人は、決意した程度だけ幸福になれる」と言ったそうにゃ。",],
+            ["/image/neko4.png", "・・・。"],
             ["/image/neko5.png", "来世は人ににゃりたいの。"],
-            ["/image/neko5.png", "ルルル～。"],
-            ["/image/neko3.png","明日死ぬかの様に生きよ。永遠に生きるかの様に学べ。マハトマ・ガンジーの名言にゃ。"],
+            ["/image/neko6.png", "素晴らしいのにゃ！"],
+            ["/image/neko7.png", "天才なにゃの？"],
+            ["/image/neko8.png", "ルルル～。"],
+            ["/image/neko9.png","明日死ぬかの様に生きよ。永遠に生きるかの様に学べ。マハトマ・ガンジーの名言にゃ。"],
+            ["/image/nekotumuri.png", "おつかれさまにゃ！"],
         ];
 
         let $timer;
@@ -134,11 +131,7 @@ window.addEventListener("DOMContentLoaded", function () {
                     // });
 
                     // }
-
-                    /* //////////////////////////////////////
-					現状、メッセージ表示中は、何回押しても設定した秒数のみ表示される。
-					他にやるとしたら、ボタンを押したタイミングで表示時間のカウント再スタート。
-					////////////////////////////////////// */
+                    
                 } else if (data["status"] === 1) {
                     // +++++ 未 +++++
                     // あまりいい方法じゃない（栗岩）

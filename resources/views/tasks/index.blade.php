@@ -77,7 +77,7 @@
 <div class="complete-msg">
   <p class="complete-msg__text"></p>
   <div class="complete-msg__img">
-    <img src="/image/neko.png" alt="">
+    <img src="/image/neko1.png" alt="">
   </div>
 </div>
 

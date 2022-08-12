@@ -31,7 +31,7 @@
                             <input type="file" name="image" class="form-control" accept="image/png,image/jpeg,image/gif" id="avatar" style="display:none;">
                             <label for="avatar" class="d-inline-block">
                                 @if (isset(Auth::user()->profile_image))
-                                <img src="{{ Storage::disk('s3')->url($tweet->image) }}" class="img-circle">
+                                <img src="../../{{ Auth::user()->profile_image }}" class="img-circle">
                                 @else
                                 <img src="../../image/no-image.png" class="img-circle">
                                 @endif
@@ -66,7 +66,7 @@
 
                         {{-- 保存 --}}
                         <div class="form-group">
-                            <button type="submit" class="btn btn-success">
+                            <button type="submit" class="btn btn-success"">
                                 保存
                             </button>
                         </div>

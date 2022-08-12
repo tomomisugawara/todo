@@ -52,12 +52,16 @@ class MypageController extends Controller
 
         }
         */
+        dd($_FILES['name']);
+        exit;
 
         $user = Auth::user();
         $user_form = $request->all();
-        if ($request->hasFile('image')) {
-            $request->file('image')->store('public/img_prof');
-            $user->profile_image = 'storage/img_prof/' . $request->file('image')->hashName();
+        if ($request->file('image')->isValid()) {
+            $file = $user_form['image'];
+            // $request->file('image')->store('public/img_prof');
+            $path = Storage::disk('s3')->put('/',$file, 'public');
+            // $user->profile_image = 'storage/img_prof/' . $request->file('image')->hashName();
         }
         $user->fill($user_form)->save();
         return redirect('/');

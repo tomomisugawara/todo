@@ -52,8 +52,6 @@ class MypageController extends Controller
 
         }
         */
-        dd($_FILES['name']);
-        exit;
 
         $user = Auth::user();
         $user_form = $request->all();

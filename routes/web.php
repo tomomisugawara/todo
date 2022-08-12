@@ -39,7 +39,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 	Route::get('/mypage/{id}/profile_edit', 'MypageController@index')->name('mypage.profile_edit');
 
-	Route::post('/mypage/profile_edit', 'MypageController@myPageUpdate')->name('mypage.update');
+	Route::post('/mypage/{id}/profile_edit', 'MypageController@myPageUpdate')->name('mypage.update');
 
 	//// 7.31追記 ////
 	Route::resource('users', 'Auth\SoftDeleteUserController')->only([

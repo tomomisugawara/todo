@@ -12,6 +12,8 @@ use App\User;
 
 use App\Models\FileImage;
 
+use Illuminate\Support\Facades\Storage;//8/12追記
+
 class MypageController extends Controller
 {
     public function index()
@@ -59,5 +61,32 @@ class MypageController extends Controller
         }
         $user->fill($user_form)->save();
         return redirect('/');
+
+
+        $tweet = new Tweet();
+
+        if($request->file('image')->isValid()) {
+            $file = $params['image'];
+            //バケットにフォルダを作ってないとき(裸で保存)
+            $path = Storage::disk('s3')->put('/',$file, 'public');
+            //バケットに「test」フォルダを作っているとき
+            $path = Storage::disk('s3')->put('/test',$file, 'public');
+            $tweet->image = $path;
+        }
+
+        $tweet->save();
+        return redirect('/tweets');
+
     }
+
+//     public function store(Request $request)
+//     {
+
+
+//         if($request->file('img_prof')->isValid()) {
+//             $file = $params['image'];
+//             //バケットにフォルダを作ってないとき(裸で保存)
+//             $path = Storage::disk('s3')->put('/',$file, 'public');
+//         }
+// }
 }

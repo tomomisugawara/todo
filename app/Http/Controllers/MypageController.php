@@ -19,7 +19,7 @@ class MypageController extends Controller
         $id = Auth::id();
         $user = DB::table('users')->find($id);
         // $data = FileImage::all();
-        return view('/mypage/profile_edit', ['id' => $id]);
+        return view('mypage/profile_edit', ['id' => $id]);
     }
 
 

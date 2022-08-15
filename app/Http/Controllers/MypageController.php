@@ -12,6 +12,8 @@ use App\User;
 
 use App\Models\FileImage;
 
+use Illuminate\Support\Facades\Storage;//8/15追記
+
 class MypageController extends Controller
 {
     public function index()

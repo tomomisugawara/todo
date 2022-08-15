@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 
-<div class="balloon">
+<!-- <div class="balloon">
     <div class="balloon login-text">
       <h5>ちいさなことからこつこつと。</h5><br>
       そんな思いから誕生したのがTODOアプリ「TIIKOTU」にゃ!<br>
@@ -12,7 +12,7 @@
       タスクを達成するとTIIKOTUがほめてくれたり、くれなかったり、たまに独り言をつぶやいたりするのにゃ。<br>
       TIIKOTUと一緒に楽しくすごそうにゃ!<br>
     </div>
-  </div>
+  </div> -->
 
   <div class="login_container">
     <img class="login-neko" src="../image/neko1.png" alt="">

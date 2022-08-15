@@ -71,7 +71,7 @@ class MypageController extends Controller
             $file = $user_form['image'];
 
             $path = Storage::disk('s3')->put('/',$file, 'public');
-            $user->profile_image = 'storage/img_prof/' . $request->file('image')->hashName();
+            // $user->profile_image = 'storage/img_prof/' . $request->file('image')->hashName();
             $user->image = $path;
         }
         $user->fill($user_form)->save();

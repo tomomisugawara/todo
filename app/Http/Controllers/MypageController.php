@@ -68,10 +68,10 @@ class MypageController extends Controller
         $user = Auth::user();
         $user_form = $request->all();
         if ($request->hasFile('image')) {
-            $file = $user_form['image'];
 
-            $path = Storage::disk('s3')->put('/',$file, 'public');
-            $user->image = $path;
+            $path = Storage::disk('s3')->put('/','public');
+
+
         }
         $user->fill($user_form)->save();
         return redirect('/');

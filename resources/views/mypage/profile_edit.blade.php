@@ -30,8 +30,6 @@
                         <span class="avatar-image">
                             <input type="file" name="image" class="form-control" accept="image/png,image/jpeg,image/gif" id="avatar" style="display:none;">
                             <label for="avatar" class="d-inline-block">
-                                dd(Auth::user());
-                                exit;
                                 @if (isset(Auth::user()->profile_image))
 
                                 {{-- <img src="../../{{ Auth::user()->profile_image }}" class="img-circle"> --}}

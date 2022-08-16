@@ -19,7 +19,7 @@ class MypageController extends Controller
     public function index()
     {
         $id = Auth::id();
-        $user = DB::table('users')->find($id);
+        // $user = DB::table('users')->find($id);
         // $data = FileImage::all();
         return view('mypage/profile_edit', ['id' => $id]);
     }
@@ -53,29 +53,29 @@ class MypageController extends Controller
         }
         */
 
-        //8/15退避
-        // $user = Auth::user();
-        // $user_form = $request->all();
-        // if ($request->hasFile('image')) {
-        //     $request->file('image')->store('public/img_prof');
-        //     $user->profile_image = 'storage/img_prof/' . $request->file('image')->hashName();
-        // }
-        // $user->fill($user_form)->save();
-        // return redirect('/');
-
-
-
+        // 8/15退避
         $user = Auth::user();
         $user_form = $request->all();
         if ($request->hasFile('image')) {
-            $file = $user_form['image'];
-
-            $path = Storage::disk('s3')->put('/',$file, 'public');
-            // $user->profile_image = 'storage/img_prof/' . $request->file('image')->hashName();
-            $user->image = $path;
+            $request->file('image')->store('public/img_prof');
+            $user->profile_image = 'storage/img_prof/' . $request->file('image')->hashName();
         }
         $user->fill($user_form)->save();
         return redirect('/');
+
+
+
+        // $user = Auth::user();
+        // $user_form = $request->all();
+        // if ($request->hasFile('image')) {
+        //     $file = $user_form['image'];
+
+        //     $path = Storage::disk('s3')->put('/',$file, 'public');
+        //     // $user->profile_image = 'storage/img_prof/' . $request->file('image')->hashName();
+        //     $user->image = $path;
+        // }
+        // $user->fill($user_form)->save();
+        // return redirect('/');
 
 
 

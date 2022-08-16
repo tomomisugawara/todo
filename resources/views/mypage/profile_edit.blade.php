@@ -32,7 +32,7 @@
                             <label for="avatar" class="d-inline-block">
                                 @if (isset(Auth::user()->profile_image))
                                 {{-- <img src="../../{{ Auth::user()->profile_image }}" class="img-circle"> --}}
-                                <img src="{{ Storage::disk('s3')->url($user->image) }}" class="img-circle">
+                                <img src="{{ Storage::disk('s3')->url(Auth::user()->profile_image) }}" class="img-circle">
                                 @else
                                 <img src="../../image/no-image.png" class="img-circle">
                                 @endif

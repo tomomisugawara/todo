@@ -24,7 +24,7 @@
             {{-- file変数 --}}
             <a href="{{ route('mypage.profile_edit',['id' => Auth::user()->id]) }}">
               @if(isset(Auth::user()->profile_image))
-              <img src="../../../../{{ Auth::user()->profile_image }}">
+              <img src="{{ Storage::disk('s3')->url(Auth::user()->profile_image) }}">
               @else
               <img src="../../../../image/no-image.png">
               @endif

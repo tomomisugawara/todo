@@ -52,19 +52,26 @@
             @foreach($tasks as $task)
             <tr>
               <td>{{ $task->title }}</td>
-              <td>
 
-                <!-- status_class呼び出す、idを取得する -->
-                <span class="label {{ $task->status_class }}" data-folderid="{{ $task->folder_id }}" data-taskid="{{ $task->id }}" style="cursor: hand; cursor:pointer;">{{ $task->status_label }}</span>
+              <td>
+                <div class="table_innar">
+                  <!-- status_class呼び出す、idを取得する -->
+                  <span class="label {{ $task->status_class }}" data-folderid="{{ $task->folder_id }}" data-taskid="{{ $task->id }}" style="cursor: hand; cursor:pointer;">{{ $task->status_label }}</span>
+                </div>
               </td>
 
-              <td><a href="{{ route('tasks.edit', ['folder' => $task->folder_id, 'task' => $task->id]) }}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+              <td>
+                <div class="table_innar">
+                  <a href="{{ route('tasks.edit', ['folder' => $task->folder_id, 'task' => $task->id]) }}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                </div>
               </td>
 
               <!-- 削除 -->
-              <td><a href="{{ route('task.delete', ['folder' => $task->folder_id, 'task' => $task->id]) }}" onClick="delete_alert(event);">
+              <td>
+                <a href="{{ route('task.delete', ['folder' => $task->folder_id, 'task' => $task->id]) }}" onClick="delete_alert(event);">
                   <button class="btn-task__delete" type="button" class="btn btn-default" aria-label="Left Align">
-                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a></td>
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a>
+              </td>
             </tr>
             @endforeach
           </tbody>

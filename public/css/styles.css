@@ -3,7 +3,9 @@
 
 html,
 body {
-	font-family: 'Nunito', sans-serif;
+	/* font-family: 'Potta One', cursive; */
+	font-family: 'Yomogi', cursive;
+	font-weight: bold;
 	font-size: 16px;
 	height: 100%;
 	/* ドット斜め */
@@ -13,6 +15,21 @@ body {
 		radial-gradient(#CEE5D0 20%, transparent 20%);
 	background-size: 300px 300px;
 	background-position: 0 0, 150px 150px;
+}
+
+/*  */
+.table>tbody>tr>td {
+	font-weight: bold;
+	color: black;
+}
+
+/**/
+.table_innar {
+	padding-top: 5px;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 .wrapper {
@@ -30,10 +47,6 @@ footer {
 	text-align: center;
 	background-color: #94B49F;
 	padding: 8px;
-}
-
-* {
-	box-sizing: border-box;
 }
 
 .panel-default .panel-heading {
@@ -62,8 +75,10 @@ footer {
 	padding: 20px;
 }
 
+/* タイトル */
 .my-navbar-brand {
-	font-size: 30px;
+	font-family: 'DynaPuff', cursive;
+	font-size: 35px;
 	color: black;
 	text-align: center;
 	align-items: center;
@@ -89,7 +104,7 @@ a.my-navbar-item:hover {
 	color: #fff;
 }
 
-/*////////// プロフィール画像 //////////*/
+/*////////// ヘッダープロフィール画像 //////////*/
 .my-navbar-control {
 	/* display: flex; */
 	align-items: center;
@@ -117,10 +132,14 @@ a.my-navbar-item:hover {
 	opacity: 0.7;
 }
 
-
 .btn-group .btn-danger {
 	background-color: #ECB390;
 	border: #ECB390;
+	font-weight: bold;
+}
+
+.btn-default{
+	font-weight: bold;
 }
 
 .table td:nth-child(2),
@@ -129,6 +148,8 @@ a.my-navbar-item:hover {
 .table td:nth-child(5) {
 	white-space: nowrap;
 	width: 45px;
+	font-family: 'Yomogi', cursive;
+	font-weight: bold;
 }
 
 .form-control[disabled],
@@ -156,7 +177,7 @@ a:hover {
 	border: none;
 }
 
-/* rogin画面 */
+/*////////// rogin画面 //////////*/
 .balloon {
 	margin-top: 15px;
 }
@@ -189,11 +210,10 @@ a:hover {
 	margin-top: 15px;
 }
 
-/* /////フォルダ・タスク画面 /////*/
-/* 編集アイコン */
+
+/* タスク編集アイコン */
 .glyphicon-pencil:before {
-	content: "\270f";
-	margin-left: 5px;
+	margin-left: 10px;
 	top: 2px;
 	/* color: black; */
 }
@@ -243,7 +263,7 @@ button {
 }
 
 .btn-folder__delete {
-	width: 25px;
+	width: 27px;
 	height: 25px;
 	position: absolute;
 	top: 10px;
@@ -252,7 +272,7 @@ button {
 }
 
 .btn-task__delete {
-	width: 25px;
+	width: 27px;
 	height: 25px;
 	top: 10px;
 	right: 12px;
@@ -266,8 +286,6 @@ button {
 .table td:nth-child(5) {
 	white-space: nowrap;
 	width: 50px;
-	vertical-align: inherit;
-	text-align: center;
 }
 
 .table>thead>tr>th {
@@ -289,7 +307,9 @@ button {
 .label-default {
 	background-color: #F9F9F9;
 	border: none;
+	font-size: 13px;
 }
+
 
 /*////////// 完了メッセージ ////////// */
 .complete-msg {

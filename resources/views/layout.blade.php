@@ -10,6 +10,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   @yield('styles')
   <link rel="stylesheet" href="/css/styles.css">
+  <!-- googl fontus -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500&family=Noto+Sans+JP:wght@100&family=Noto+Serif+JP:wght@200&family=Potta+One&family=Yomogi&display=swap" rel="stylesheet">
 
 <body>
   <div class="wrapper">
@@ -44,11 +48,11 @@
           @csrf
           </form>
           @else
-		  <div class="my-navbar_block-inner">
-          <a class="my-navbar-item" href="{{ route('login') }}">ログイン</a>
+          <div class="my-navbar_block-inner">
+            <a class="my-navbar-item" href="{{ route('login') }}">ログイン</a>
 
-          <a class="my-navbar-item" href="{{ route('register') }}">会員登録</a>
-		  </div>
+            <a class="my-navbar-item" href="{{ route('register') }}">会員登録</a>
+          </div>
           @endif
         </div>
       </nav>
@@ -69,13 +73,13 @@
 
 
     <footer>
-    {{-- 肉球HTML --}}
-    <div class="footer_flax">
-      <div class="steps"></div>
-      <img class="kuroneko" src="../../../../image/kuroneko.png" alt="">
-    </div>
-    <div class="copy">
-      <small>&copy; 2022 t-sugawara</small>
+      {{-- 肉球HTML --}}
+      <div class="footer_flax">
+        <div class="steps"></div>
+        <img class="kuroneko" src="../../../../image/kuroneko.png" alt="">
+      </div>
+      <div class="copy">
+        <small>&copy; 2022 t-sugawara</small>
       </div>
     </footer>
 

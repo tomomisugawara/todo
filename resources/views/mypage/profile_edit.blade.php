@@ -34,7 +34,7 @@
 
                                 {{--8/16退避 <img src="../../{{ Auth::user()->profile_image }}" class="img-circle"> --}}
 
-                                <img src="{{ Storage::disk('s3')->url($user->profile_image) }}" class="img-circle">
+                                <img src="{{ Storage::disk('s3')->url(Auth::user()->profile_image) }}" class="img-circle">
                                 @else
                                 <img src="../../image/no-image.png" class="img-circle">
                                 @endif

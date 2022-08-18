@@ -30,7 +30,7 @@
                 <input type="text" class="form-control" id="email" name="email" />
               </div>
               <div class="text-right">
-                <button type="submit" class="btn btn-primary">再発行リンクを送る</button>
+                <button type="submit" class="btn btn-success">再発行リンクを送る</button>
               </div>
             </form>
           </div>

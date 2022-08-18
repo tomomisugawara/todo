@@ -26,6 +26,8 @@ class EditUser extends FormRequest
         return [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email:filter|max:255',
+
+            'image' => 'image|mimes:jpeg,png,jpg|max:2048',//8/18追加
         ];
     }
 

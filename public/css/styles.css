@@ -182,20 +182,22 @@ a:hover {
 .balloon-box {
 	display: flex;
 	justify-content: center;
+	/* display:table;
+	table-layout: fixed; */
 }
 
-.balloon {
-	text-align: center;
+.balloon-text {
+
 }
 
-.login-text {
+.balloon-innar {
 	display: inline-block;
 	position: relative;
 	border: solid #ECB390;
 	border-radius: 50px 50px;
 	padding: 10px;
 }
-.login-text:before {
+.balloon-innar:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -205,7 +207,7 @@ a:hover {
   border-right: 12px solid #CEE5D0;
   z-index: 2;
 }
-.login-text:after {
+.balloon-innar:after {
 	content: "";
   position: absolute;
   top: 50%;
@@ -214,24 +216,15 @@ a:hover {
   border: 14px solid transparent;
   border-right: 14px solid #ECB390;
   z-index: 1;
-	/* content: "";
-  display: inline-block;
-  position: absolute;
-  top: 35px;
-  left: -24px;
-  border: 12px solid transparent;
-  border-right: 12px solid #ECB390; */
 }
 
 .login-neko {
-	left: -80px;
 	width: 150px;
 }
 
 @media screen and (min-width: 768px) {
 	.login-neko {
-		/* width: 50%; */
-
+		width: 15%;
 	}
 }
 
@@ -373,12 +366,29 @@ button {
 	position: relative;
 	text-align: center;
 	padding: 90px 12px;
-	border-radius: 50%;
+	border-radius: 50% 50%;
 	background-color: #ECB390;
 	width: calc(100% - 120px);
 	left: 120px;
+}
+
+.complete-msg__text:before {
 
 }
+
+.complete-msg__text:after {
+	content: "";
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  margin-top: -14px;
+  border: 14px solid transparent;
+  border-right: 14px solid #ECB390;
+  z-index: 1;
+}
+
+
+
 
 .complete-msg__img {
 	position: absolute;

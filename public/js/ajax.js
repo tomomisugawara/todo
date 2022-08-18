@@ -14,13 +14,13 @@ window.addEventListener("DOMContentLoaded", function () {
         var $arr_msg = [
             ["/image/neko1.png", "応援してるのにゃ。"],
             ["/image/neko2.png", "タスク達成おめでとうにゃ！"],
-            [ "/image/neko3.png", "リンカーンは「たいていの人は、決意した程度だけ幸福になれる」と言ったそうにゃ。",],
+            [ "/image/neko3.png", "リンカーンは「たいていの人は、決意した程度だけ幸福になれる」と言ったそうにゃ～。",],
             ["/image/neko4.png", "・・・。"],
             ["/image/neko5.png", "来世は人ににゃりたいの。"],
             ["/image/neko6.png", "素晴らしいのにゃ！"],
-            ["/image/neko7.png", "天才なにゃの？"],
+            ["/image/neko7.png", "天才にゃ!"],
             ["/image/neko8.png", "ルルル～。"],
-            ["/image/neko9.png","明日死ぬかの様に生きよ。永遠に生きるかの様に学べ。マハトマ・ガンジーの名言にゃ。"],
+            ["/image/neko9.png","ららら～。"],
             ["/image/nekotumuri.png", "おつかれさまにゃ！"],
         ];
 

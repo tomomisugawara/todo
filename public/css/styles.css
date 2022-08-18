@@ -178,6 +178,13 @@ a:hover {
 }
 
 /*////////// rogin画面 //////////*/
+
+.login-neko-wrapper{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .balloon {
 	text-align: center;
 }
@@ -187,14 +194,62 @@ a:hover {
 	border: solid #ECB390;
 	border-radius: 50px 50px;
 	padding: 10px;
+=======
+	margin-top: 15px;
+	text-align: center;
 }
-
 .login-neko {
 	margin-left: 25%;
 	left: -80px;
 	width: 150px;
-	top: 454px;
+	padding-top: 58px;
 }
+/*  */
+.balloon {
+	text-align: center;
+}
+.balloon-innar {
+  position: relative;
+  margin: 2em 0 2em 40px;
+  padding: 15px;
+  background: #ECB390;
+  border-radius: 30px;
+  display: inline-block
+}
+
+.balloon-innar:before {
+  content: "";
+  position: absolute;
+  left: -38px;
+  width: 13px;
+  height: 12px;
+  bottom: 0;
+  background: #ECB390;
+  border-radius: 50%;
+}
+
+.balloon-innar:after {
+  content: "";
+  position: absolute;
+  left: -24px;
+  width: 20px;
+  height: 18px;
+  bottom: 3px;
+  background: #ECB390;
+  border-radius: 50%;
+}
+.balloon-innar p {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.login-neko  {
+		width: 50%;
+
+	}
+}
+/*  */
 
 .form-group {
 	text-align: center;

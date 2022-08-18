@@ -179,19 +179,14 @@ a:hover {
 
 /*////////// rogin画面 //////////*/
 .balloon {
-	margin-top: 15px;
+	text-align: center;
 }
 
 .login-text {
-	/* width: calc(100% - 40%); */
-	/* width: 300px; */
-	text-align: center;
-	padding: 70px 14px;
-	border-radius: 50% 50% / 50% 50%;
-	border: 1rem solid #ECB390;
-	/* background-color: #ECB390; */
-	/* background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); */
-	margin: 0 auto;
+	display: inline-block;
+	border: solid #ECB390;
+	border-radius: 50px 50px;
+	padding: 10px;
 }
 
 .login-neko {
@@ -270,8 +265,6 @@ button {
 	right: 12px;
 	z-index: 3;
 	padding: 2px;
-	text-align: center;
-	align-items: center;
 }
 
 .btn-task__delete {
@@ -281,8 +274,6 @@ button {
 	right: 12px;
 	z-index: 3;
 	padding: 2px;
-	text-align: center;
-	align-items: center;
 }
 
 .table td:nth-child(2),

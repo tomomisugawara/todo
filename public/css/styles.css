@@ -270,6 +270,8 @@ button {
 	right: 12px;
 	z-index: 3;
 	padding: 2px;
+	text-align: center;
+	align-items: center;
 }
 
 .btn-task__delete {
@@ -279,6 +281,8 @@ button {
 	right: 12px;
 	z-index: 3;
 	padding: 2px;
+	text-align: center;
+	align-items: center;
 }
 
 .table td:nth-child(2),

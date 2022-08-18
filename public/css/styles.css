@@ -138,7 +138,7 @@ a.my-navbar-item:hover {
 	font-weight: bold;
 }
 
-.btn-default{
+.btn-default {
 	font-weight: bold;
 }
 
@@ -179,9 +179,8 @@ a:hover {
 
 /*////////// rogin画面 //////////*/
 
-.login-neko-wrapper{
+.balloon-box {
 	display: flex;
-	align-items: center;
 	justify-content: center;
 }
 
@@ -191,65 +190,51 @@ a:hover {
 
 .login-text {
 	display: inline-block;
+	position: relative;
 	border: solid #ECB390;
 	border-radius: 50px 50px;
 	padding: 10px;
-=======
-	margin-top: 15px;
-	text-align: center;
 }
+.login-text:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -23px;
+  margin-top: -12px;
+  border: 12px solid transparent;
+  border-right: 12px solid #CEE5D0;
+  z-index: 2;
+}
+.login-text:after {
+	content: "";
+  position: absolute;
+  top: 50%;
+  left: -29px;
+  margin-top: -14px;
+  border: 14px solid transparent;
+  border-right: 14px solid #ECB390;
+  z-index: 1;
+	/* content: "";
+  display: inline-block;
+  position: absolute;
+  top: 35px;
+  left: -24px;
+  border: 12px solid transparent;
+  border-right: 12px solid #ECB390; */
+}
+
 .login-neko {
-	margin-left: 25%;
 	left: -80px;
 	width: 150px;
-	padding-top: 58px;
-}
-/*  */
-.balloon {
-	text-align: center;
-}
-.balloon-innar {
-  position: relative;
-  margin: 2em 0 2em 40px;
-  padding: 15px;
-  background: #ECB390;
-  border-radius: 30px;
-  display: inline-block
-}
-
-.balloon-innar:before {
-  content: "";
-  position: absolute;
-  left: -38px;
-  width: 13px;
-  height: 12px;
-  bottom: 0;
-  background: #ECB390;
-  border-radius: 50%;
-}
-
-.balloon-innar:after {
-  content: "";
-  position: absolute;
-  left: -24px;
-  width: 20px;
-  height: 18px;
-  bottom: 3px;
-  background: #ECB390;
-  border-radius: 50%;
-}
-.balloon-innar p {
-  margin: 0;
-  padding: 0;
 }
 
 @media screen and (min-width: 768px) {
-	.login-neko  {
-		width: 50%;
+	.login-neko {
+		/* width: 50%; */
 
 	}
 }
-/*  */
+
 
 .form-group {
 	text-align: center;

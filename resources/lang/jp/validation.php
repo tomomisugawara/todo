@@ -150,6 +150,6 @@ return [
         'email' => 'メールアドレス',
         'password' => 'パスワード',
         'token' => 'トークン',
-        'uploaded' => '画像'
+        'image' => '画像'//8/19追記
     ],
 ];

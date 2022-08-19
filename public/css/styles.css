@@ -193,26 +193,29 @@ a:hover {
 .balloon-innar {
 	display: inline-block;
 	position: relative;
-	border: solid #ECB390;
+	/* border: solid #ECB390; */
+	background-color: #ECB390;
 	border-radius: 50px 50px;
 	padding: 10px;
 	margin-bottom: 10px;
+	text-align: center;
 }
 .balloon-innar:before {
-  content: "";
+  /* content: "";
   position: absolute;
   top: 50%;
   left: -23px;
   margin-top: -12px;
   border: 12px solid transparent;
   border-right: 12px solid #FCF8E8;
-  z-index: 2;
+  z-index: 2; */
 }
+
 .balloon-innar:after {
 	content: "";
   position: absolute;
   top: 50%;
-  left: -29px;
+  left: -25px;
   margin-top: -14px;
   border: 14px solid transparent;
   border-right: 14px solid #ECB390;

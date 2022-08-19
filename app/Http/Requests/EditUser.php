@@ -27,8 +27,7 @@ class EditUser extends FormRequest
             'name' => 'required|string|max:255',
             'email' => 'required|string|email:filter|max:255',
 
-            // 'image' => 'image|mimes:jpeg,png,jpg|max:9999',
-            //8/18追加
+            'image' => 'image|mimes:jpeg,png,jpg|max:9999', //8/18追加
         ];
     }
 
@@ -36,7 +35,7 @@ class EditUser extends FormRequest
     {
         return [
             'name' => 'ニックネーム',
-            'uploaded' => '画像'
+            'uploaded' => '画像' //8/18追加
         ];
     }
 }

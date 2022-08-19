@@ -150,5 +150,6 @@ return [
         'email' => 'メールアドレス',
         'password' => 'パスワード',
         'token' => 'トークン',
+        'uploaded'=> 'gazou',
     ],
 ];

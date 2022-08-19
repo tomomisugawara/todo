@@ -187,7 +187,7 @@ a:hover {
 }
 
 .balloon-text {
-
+	width: 50%;
 }
 
 .balloon-innar {
@@ -219,12 +219,24 @@ a:hover {
 }
 
 .login-neko {
+	position: relative;
 	width: 150px;
+}
+
+.login-neko img {
+	position: absolute;
+	object-fit: contain;
+	width: 100%;
+	bottom: 0px;
 }
 
 @media screen and (min-width: 768px) {
 	.login-neko {
 		width: 15%;
+
+	}
+	.balloon-text {
+		width: initial;
 	}
 }
 

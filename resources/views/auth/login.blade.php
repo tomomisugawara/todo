@@ -4,7 +4,11 @@
 <div class="container">
 
 <div class="balloon-box">
-<img class="login-neko" src="../image/neko1.png" alt="">
+
+  <div class="login-neko">
+<img src="../image/neko1.png" alt="">
+</div>
+
   <div class="balloon-text">
     <div class="balloon-innar">
       吾輩はTIIKOTUであるにゃ。<br>

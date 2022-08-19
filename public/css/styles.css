@@ -196,6 +196,7 @@ a:hover {
 	border: solid #ECB390;
 	border-radius: 50px 50px;
 	padding: 10px;
+	margin-bottom: 10px;
 }
 .balloon-innar:before {
   content: "";
@@ -204,7 +205,7 @@ a:hover {
   left: -23px;
   margin-top: -12px;
   border: 12px solid transparent;
-  border-right: 12px solid #CEE5D0;
+  border-right: 12px solid #FCF8E8;
   z-index: 2;
 }
 .balloon-innar:after {

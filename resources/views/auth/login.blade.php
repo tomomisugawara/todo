@@ -11,7 +11,8 @@
 
   <div class="balloon-text">
     <div class="balloon-innar">
-      吾輩はTIIKOTUであるにゃ。<br>
+      吾輩はTODOアプリ<br>
+      TIIKOTUであるにゃ。<br>
       ちいさなことからこつこつとできたらいい。<br>
       そんな思いから生まれたのにゃ。<br>
     </div>

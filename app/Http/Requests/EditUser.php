@@ -35,7 +35,7 @@ class EditUser extends FormRequest
     {
         return [
             'name' => 'ニックネーム',
-            // 'uploaded' => '画像' //8/18追加
+            '' => '(PNG/JPG/GIF)' //8/22追加
         ];
     }
 }

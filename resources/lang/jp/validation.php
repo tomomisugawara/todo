@@ -82,8 +82,10 @@ return [
         'string' => ':attribute は :max 文字以内で入力してください。',
         'array' => 'The :attribute may not have more than :max items.',
     ],
-    'mimes' => 'The :attribute must be a file of type: :values.',
-    'mimetypes' => 'The :attribute must be a file of type: :values.',
+    'mimes' => '指定されたファイルが :attribute ではありません。: :values.',
+    // "指定されたファイルが画像ではありません。",
+    'mimetypes' => '"指定された拡張子（PNG/JPG/GIF）ではありません。: :values.',
+    // "指定された拡張子（PNG/JPG/GIF）ではありません。",
     'min' => [
         'numeric' => 'The :attribute must be at least :min.',
         'file' => 'The :attribute must be at least :min kilobytes.',
@@ -153,3 +155,9 @@ return [
         'image' => '画像'//8/19追記
     ],
 ];
+
+
+
+
+"image" => "指定されたファイルが画像ではありません。",
+"mines" => "指定された拡張子（PNG/JPG/GIF）ではありません。",

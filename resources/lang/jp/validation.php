@@ -82,10 +82,8 @@ return [
         'string' => ':attribute は :max 文字以内で入力してください。',
         'array' => 'The :attribute may not have more than :max items.',
     ],
-    'mimes' => ' :attribute must be a file of type: :values.',
-    // "指定されたファイルが画像ではありません。",
-    'mimetypes' => 'The :attribute must be a file of type: :values.',
-    // "指定された拡張子（PNG/JPG/GIF）ではありません。",
+    'mimes' => '指定されたファイルが :attribute ではありません。 ',
+    'mimetypes' => '指定された拡張子（PNG/JPG/GIF）ではありません。',
     'min' => [
         'numeric' => 'The :attribute must be at least :min.',
         'file' => 'The :attribute must be at least :min kilobytes.',

@@ -24,8 +24,8 @@ class EditUser extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email:filter|max:255',
+            'name' => 'required|string|max:191',
+            'email' => 'required|string|email:filter|max:191',
 
             'image' => 'image|mimes:jpeg,png,jpg|max:9999', //8/18追加
         ];
